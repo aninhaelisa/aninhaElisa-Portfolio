@@ -148,7 +148,7 @@ footer {
     position: absolute;
     right: -27px;
     bottom: 105px;
-    max-width: 190px;
+    max-width: 192px;
     min-height: 65px;
     padding: 12px;
     background: white;
@@ -183,7 +183,7 @@ footer {
     position: absolute;
     right: 37px;
     bottom: -12px;
-    width: 31px;
+    width: 11px;
     height: 20px;
     background: white;
     border-right: 3px solid black;
@@ -191,3 +191,97 @@ footer {
     transform: rotate(148deg);
 }
 
+
+/*MENU*/
+.navbar {
+    position: relative;
+}
+
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 5px 10px;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    cursor: pointer;
+
+    font-family: "Geo", sans-serif;
+}
+
+.menu-toggle:active {
+    border-top-color: #404040;
+    border-left-color: #404040;
+    border-right-color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+.menu-toggle img {
+    width: 20px;
+    height: 20px;
+    image-rendering: pixelated;
+}
+
+
+/* MENU FECHADO */
+
+.nav-menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 180px;
+
+    margin: 0;
+    padding: 3px;
+
+    list-style: none;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+}
+
+
+/* MENU ABERTO */
+
+.nav-menu.active {
+    display: block;
+}
+
+
+.nav-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 7px;
+
+    color: #000;
+    text-decoration: none;
+
+    font-family: "Geo", sans-serif;
+}
+
+.nav-menu li a:hover {
+    background: #000080;
+    color: white;
+}
+
+.nav-menu img {
+    width: 20px;
+    height: 20px;
+    image-rendering: pixelated;
+}
