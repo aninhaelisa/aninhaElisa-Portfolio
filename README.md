@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/aninhaelisa/aninhaelisa/main/src/gif1.gif" width="100%">
+<img src="https://raw.githubusercontent.com/aninhaelisa/aninhaelisa/main/src/gif2.gif" width="100%">
 
 Software Engineering Student · Java Developer
 

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-:root{
+
+:root {
     /*CORES*/
     --cor-fundo: #48636a;
     --cor-menu: #525252;
@@ -10,7 +11,7 @@
     --font-texto: "Inter", sans-serif;
     --font-size-destaque: 18px;
     --font-weight-destaque: bold;
-    
+
     /*PADDING'S*/
     --padding-padrao: 10px;
     --padding-menor: 5px;
@@ -22,7 +23,8 @@
     --width-padrao-icone: 45px;
 }
 
-html, body{
+html,
+body {
     display: flex;
     align-items: center;
     width: 100%;
@@ -30,16 +32,18 @@ html, body{
     flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
-    
+
 }
-body{
+
+body {
     background-image: url("../src/fundo.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-color: var(--cor-fundo);
     font-family: var(--font-texto);
 }
-footer{
+
+footer {
     width: 100%;
     height: 50px;
     background-color: var(--cor-menu);
@@ -48,7 +52,8 @@ footer{
     justify-content: flex-end;
     padding: var(--padding-padrao);
 }
-.data-hora{
+
+.data-hora {
     display: flex;
     justify-content: center;
     color: var(--cor-texto);
@@ -60,19 +65,19 @@ footer{
     align-items: center;
 }
 
-.footer-icons{
+.footer-icons {
     display: flex;
     justify-content: flex-start;
     width: 100%;
 }
 
-.footer-icons img{
+.footer-icons img {
     width: var(--width-padrao-icone);
     height: var(--height-padrao-icone);
     margin-left: 20px;
 }
 
-.home{
+.home {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
@@ -80,30 +85,109 @@ footer{
     height: 100%;
 }
 
-.icons{
+.icons {
     display: flex;
     margin: 10px;
     flex-direction: column;
     align-items: center;
 }
 
-.icons img{
+.icons img {
     width: var(--width-padrao-icone);
     height: var(--height-padrao-icone);
     margin-top: 15px;
 }
 
-.icons a{
+.icons a {
     text-decoration: none;
     font-family: var(--font-destaque);
     color: var(--cor-texto);
     font-weight: var(--font-weight-destaque);
 }
 
-.pasta{
+.pasta {
     display: flex;
     align-items: center;
     text-align: center;
     flex-direction: column;
 
 }
+
+.mascote {
+    position: fixed;
+    right: 25px;
+    bottom: 20px;
+    width: 130px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+}
+
+.mascote-personagem {
+    width: 110px;
+    height: 110px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+}
+
+.mascote-personagem img {
+    width: 60%;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.mascote-balao {
+    position: absolute;
+    right: -27px;
+    bottom: 105px;
+    max-width: 190px;
+    min-height: 65px;
+    padding: 12px;
+    background: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0 black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(8px) scale(0.95);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    margin-right: 10px;
+}
+
+.mascote-balao.visivel {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.mascote-fala {
+    margin: 0;
+    font-family: "Geo", sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    color: black;
+}
+
+.mascote-balao::after {
+    content: "";
+    position: absolute;
+    right: 37px;
+    bottom: -12px;
+    width: 31px;
+    height: 20px;
+    background: white;
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+    transform: rotate(148deg);
+}
+
