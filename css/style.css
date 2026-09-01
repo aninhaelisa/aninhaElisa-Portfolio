@@ -127,6 +127,9 @@ footer {
     font-family: var(--font-destaque);
     color: var(--cor-texto);
     font-weight: var(--font-weight-destaque);
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
 }
 
 .pasta {
@@ -368,6 +371,35 @@ footer {
     overflow-y: auto;
     font-family: var(--font-texto);
 }
+.janela-conteudo::-webkit-scrollbar {
+    width: 16px;
+}
+
+.janela-conteudo::-webkit-scrollbar-track {
+    background: #c0c0c0;
+    border-left: 2px solid #ffffff;
+}
+
+.janela-conteudo::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-top: var(--borda-top);
+    border-left: var(--borda-left);
+    border-right: var(--borda-right);
+    border-bottom: var(--borda-bottom);
+}
+
+.janela-conteudo::-webkit-scrollbar-thumb:hover {
+    background: #d4d4d4;
+}
+
+.janela-conteudo::-webkit-scrollbar-button {
+    height: 16px;
+    background: #c0c0c0;
+    border-top: var(--borda-top);
+    border-left: var(--borda-left);
+    border-right: var(--borda-right);
+    border-bottom: var(--borda-bottom);
+}
 
 .abas-janelas {
     display: flex;
@@ -427,6 +459,21 @@ footer {
     align-items: center;
     justify-content: flex-start;
 }
+
+.janela-habilidades ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.janela-habilidades p{
+    margin-right: 5px;
+}
+
+
 
 /*MENU DE CONTEXTO*/
 .menu-contexto {

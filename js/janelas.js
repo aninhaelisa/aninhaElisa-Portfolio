@@ -13,6 +13,31 @@ const dadosJanelas = {
         largura: "350px",
         altura: "250px"
     },
+    habilidades: {
+        titulo: "Habilidades",
+        conteudo: `
+        <div class="janela-habilidades">
+        <h3>MINHAS HABILIDADES</h3>
+        <ul> 
+        <p>✔ Java</p>
+        <p>✔ JDBC</p>
+        <p>✔ CSS</p>
+        <p>✔ Spring Boot</p>
+        <p>✔ Linux</p>
+        <p>✔ MySQL</p>
+        <p>✔ PostgreSQL</p>
+        <p>✔ Java Script</p>
+        <p>✔ Canva</p>
+        <p>✔ Figma</p>
+        <p>✔ Trello</p>
+        <p>✔ HTML</p>
+        <p>✔ GIT</p>
+        </ul>
+        </div>
+        `,
+        largura: "350px",
+        altura: "250px"
+    }
     
 };
 
@@ -20,6 +45,14 @@ let zIndexAtual = 1000;
 let janelasAbertas = []; 
 
 document.querySelectorAll('.pasta').forEach(botao => {
+    botao.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        const idJanela = botao.getAttribute('data-janela');
+        criarJanela(idJanela);
+    });
+});
+
+document.querySelectorAll('.icones-janelas').forEach(botao => {
     botao.addEventListener('click', (e) => {
         e.preventDefault(); 
         const idJanela = botao.getAttribute('data-janela');
