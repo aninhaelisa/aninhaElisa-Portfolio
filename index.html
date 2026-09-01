@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANINHA ELISA :D</title>
+    <title>ANINHA ELISA</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="src/icon.png" type="image/x-icon">
@@ -57,10 +57,12 @@
                     </li>
                 </ul>
             </nav>
+
+            <div class="abas-janelas" id="containerAbas"></div>
         </header>
         <section class="footer-icons">
             <a href="#" id="ocultar-mob"> <img src="src/icones/navegador.png" alt="navegador"> </a>
-            <a href="#"> <img src="src/icones/info.png" alt="informação"> </a>
+            <a href="#" id="ocultar-mob"> <img src="src/icones/cam.png" alt="informação"> </a>
             <a href="#" id="ocultar-mob"> <img src="src/icones/nota].png" alt="informação"> </a>
         </section>
 
@@ -72,7 +74,7 @@
 
     <section class="home">
         <section class="icons">
-            <a href="#" class=" pasta redeSocial"> <img src="src/icones/pasta.png" alt="pasta-redeSocial">
+            <a href="#" class="pasta redeSocial" data-janela="pastaContato"> <img src="src/icones/pasta.png" alt="pasta-redeSocial">
                 <p>contato</p>
             </a>
             <a href="#"> <img src="src/icones/checkList.png" alt="habilidades"> </a>
@@ -89,7 +91,20 @@
         </section>
     </section>
 
-
+    <div id="caixa-selecao"></div>
+    <div id="menu-contexto" class="menu-contexto">
+        <ul>
+            <li id="menu-atualizar">Atualizar</li>
+            <li id="menu-tela-cheia">Tela cheia</li>
+            <li id="menu-copiar-url">Copiar endereço</li>
+            <hr>
+            <li id="menu-propriedades" data-janela="pastaPropriedades">Propriedades</li>
+            <li id="menu-configuracoes" data-janela="pastaConfiguracoes">Configurações</li>
+            <li id="menu-contato" data-janela="pastaContato">Meu contato</li>
+            <li id="menu-sobre" data-janela="pastaSobre">Sobre mim</li>
+        </ul>
+    </div>
+    <script src="js/janelas.js"></script>
     <script src="js/mascote.js"></script>
     <script src="js/script.js"></script>
 </body>

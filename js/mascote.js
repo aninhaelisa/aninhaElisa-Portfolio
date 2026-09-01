@@ -52,7 +52,7 @@ const expressoes = [
     {
         imagem: "../src/mascote/sad.gif",
         falas: [
-            "Esqueci de salvar :(",
+            "Esqueci de salvar...",
             "Só mais um bug...",
             "Só descansando um pouquinho...",
             "O código venceu",
