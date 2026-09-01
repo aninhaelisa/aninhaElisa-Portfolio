@@ -9,7 +9,7 @@
     /*FONTES*/
     --font-destaque: "Geo", sans-serif;
     --font-texto: "Inter", sans-serif;
-    --font-size-destaque: 18px;
+    --font-size-destaque: 13px;
     --font-weight-destaque: bold;
 
     /*PADDING'S*/
@@ -19,8 +19,8 @@
     /*TAMANHOS*/
     --width-padrao-janela: 200px;
     --height-padrao-janela: 400px;
-    --height-padrao-icone: 45px;
-    --width-padrao-icone: 45px;
+    --height-padrao-icone: 5vh;
+    --width-padrao-icone: 5vh;
 }
 
 html,
@@ -45,7 +45,7 @@ body {
 
 footer {
     width: 100%;
-    height: 50px;
+    height: 20px;
     background-color: var(--cor-menu);
     display: flex;
     flex-direction: row;
@@ -57,18 +57,21 @@ footer {
     display: flex;
     justify-content: center;
     color: var(--cor-texto);
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap;
     /*position: relative;*/
     font-family: var(--font-destaque);
     padding: var(--padding-menor);
     font-size: var(--font-size-destaque);
     align-items: center;
+    text-align: center;
 }
 
 .footer-icons {
     display: flex;
     justify-content: flex-start;
     width: 100%;
+    align-items: center;
 }
 
 .footer-icons img {
@@ -193,26 +196,25 @@ footer {
 
 
 /*MENU*/
+
 .navbar {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .menu-toggle {
     display: flex;
     align-items: center;
     gap: 6px;
-
     padding: 5px 10px;
-
+    margin-left: 5px;
     background: #c0c0c0;
-
     border-top: 2px solid #ffffff;
     border-left: 2px solid #ffffff;
     border-right: 2px solid #404040;
     border-bottom: 2px solid #404040;
-
     cursor: pointer;
-
     font-family: "Geo", sans-serif;
 }
 
@@ -229,25 +231,16 @@ footer {
     image-rendering: pixelated;
 }
 
-
-/* MENU FECHADO */
-
 .nav-menu {
     display: none;
-
     position: absolute;
     top: 100%;
     left: 0;
-
     width: 180px;
-
     margin: 0;
     padding: 3px;
-
     list-style: none;
-
     background: #c0c0c0;
-
     border-top: 2px solid #ffffff;
     border-left: 2px solid #ffffff;
     border-right: 2px solid #404040;
@@ -266,12 +259,9 @@ footer {
     display: flex;
     align-items: center;
     gap: 8px;
-
     padding: 7px;
-
     color: #000;
     text-decoration: none;
-
     font-family: "Geo", sans-serif;
 }
 
@@ -284,4 +274,16 @@ footer {
     width: 20px;
     height: 20px;
     image-rendering: pixelated;
+}
+
+
+@media screen and (max-width: 768px) {
+    #ocultar-mob{
+        display: none;
+    }
+    
+    .footer-icons img{
+        width: 3vh;
+        height: 3vh;
+    }
 }

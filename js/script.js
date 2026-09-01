@@ -1,4 +1,6 @@
 document.body.style.overflow = 'hidden';
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-menu");
 
 function iniciarDataEHora() {
 
@@ -24,11 +26,10 @@ function iniciarDataEHora() {
     hora();
 }
 
-window.onload = iniciarDataEHora;
-
-const menuToggle = document.querySelector(".menu-toggle");
-const navMenu = document.querySelector(".nav-menu");
-
 menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
+
+window.onload = iniciarDataEHora;
+
+
