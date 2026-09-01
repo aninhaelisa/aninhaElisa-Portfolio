@@ -1,0 +1,206 @@
+
+/*JANELAS*/
+.desktop-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.icone-abrir {
+    cursor: pointer;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+
+.janela {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #0054e6;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.3);
+    overflow: hidden;
+    touch-action: none;
+    border-top: var(--borda-top);
+    border-left: var(--borda-left);
+    border-right: var(--borda-right);
+    border-bottom: var(--borda-bottom);
+}
+
+.janela-barra {
+    padding: 10px;
+    cursor: move;
+    background: #383838;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    font-family: var(--font-destaque);
+}
+
+.btn-fechar {
+    background-color: #e81123;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn-fechar:hover {
+    background-color: #f1707a;
+}
+
+.janela-conteudo {
+    padding: 5px;
+    color: #333;
+    height: calc(100% - 45px); 
+    overflow-y: auto;
+    font-family: var(--font-texto);
+}
+.janela-conteudo::-webkit-scrollbar {
+    width: 16px;
+}
+
+.janela-conteudo::-webkit-scrollbar-track {
+    background: #c0c0c0;
+    border-left: 2px solid #ffffff;
+}
+
+.janela-conteudo::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-top: var(--borda-top);
+    border-left: var(--borda-left);
+    border-right: var(--borda-right);
+    border-bottom: var(--borda-bottom);
+}
+
+.janela-conteudo::-webkit-scrollbar-thumb:hover {
+    background: #d4d4d4;
+}
+
+.janela-conteudo::-webkit-scrollbar-button {
+    height: 16px;
+    background: #c0c0c0;
+    border-top: var(--borda-top);
+    border-left: var(--borda-left);
+    border-right: var(--borda-right);
+    border-bottom: var(--borda-bottom);
+}
+
+.abas-janelas {
+    display: flex;
+    gap: 8px;
+    margin-left: 5px;
+    align-items: center;
+    overflow-x: auto; 
+}
+
+.aba-item {
+    background-color: #c0c0c0;
+    border-top: var(--borda-top);
+    border-left: var(--borda-left);
+    border-right: var(--borda-right);
+    border-bottom: var(--borda-bottom);
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background 0.2s;
+    font-family: var(--font-destaque);
+}
+
+.aba-item:hover {
+    background-color: #e5f1fb;
+}
+
+.aba-item.ativa {
+    border-top-color: #404040;
+    border-left-color: #404040;
+    border-right-color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+.janela-conteudo a{
+    
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-family: var(--font-destaque);
+    text-align: center;
+}
+
+.janela-conteudo img{
+    width: 60px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.janela-icons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.janela-habilidades ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.janela-habilidades p{
+    margin-right: 5px;
+}
+
+
+.janela {
+    position: absolute;
+    min-width: 200px;
+    min-height: 120px;
+}
+
+.janela-redimensionar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    cursor: nwse-resize;
+}
+
+.janela-redimensionar {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    width: 12px;
+    height: 12px;
+
+    cursor: nwse-resize;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 45%,
+            #404040 45%,
+            #404040 55%,
+            transparent 55%
+        ),
+        linear-gradient(
+            135deg,
+            transparent 60%,
+            #808080 60%,
+            #808080 70%,
+            transparent 70%
+        );
+}

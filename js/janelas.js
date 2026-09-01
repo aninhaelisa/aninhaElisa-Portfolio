@@ -84,15 +84,16 @@ function criarJanela(id) {
     novaJanela.style.height = info.altura;
     novaJanela.style.zIndex = ++zIndexAtual;
 
-    novaJanela.innerHTML = `
-        <div class="janela-barra">
-            <span>${info.titulo}</span>
-            <button class="btn-fechar">X</button>
-        </div>
-        <div class="janela-conteudo">
-            ${info.conteudo}
-        </div>
-    `;
+    novaJanela.innerHTML = ` 
+    <div class="janela-barra"> 
+        <span>${info.titulo}</span> 
+        <button class="btn-fechar">X</button> 
+    </div> 
+    <div class="janela-conteudo"> 
+        ${info.conteudo} 
+    </div>
+    <div class="janela-redimensionar"></div>
+`;
 
     document.body.appendChild(novaJanela);
 
@@ -116,6 +117,7 @@ function criarJanela(id) {
     novaJanela.addEventListener('mousedown', () => focarJanela(novaJanela));
     novaJanela.addEventListener('touchstart', () => focarJanela(novaJanela));
     configurarArrasto(novaJanela, novaJanela.querySelector('.janela-barra'));
+    configurarRedimensionamento(novaJanela);
 }
 
 function focarECentralizarJanela(janela) {
@@ -146,6 +148,97 @@ function fecharJanelaCompleto(id) {
     const aba = document.getElementById(`aba-${id}`);
     if (janela) janela.remove();
     if (aba) aba.remove();
+}
+
+function configurarRedimensionamento(janela) {
+
+    const alca = janela.querySelector('.janela-redimensionar');
+
+    let inicioX = 0;
+    let inicioY = 0;
+    let larguraInicial = 0;
+    let alturaInicial = 0;
+
+    alca.addEventListener('mousedown', iniciarResize);
+    alca.addEventListener('touchstart', iniciarResize, { passive: false });
+
+    function iniciarResize(e) {
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        const clienteX = e.type === 'touchstart'
+            ? e.touches[0].clientX
+            : e.clientX;
+
+        const clienteY = e.type === 'touchstart'
+            ? e.touches[0].clientY
+            : e.clientY;
+
+        inicioX = clienteX;
+        inicioY = clienteY;
+
+        larguraInicial = janela.offsetWidth;
+        alturaInicial = janela.offsetHeight;
+
+        document.addEventListener('mousemove', redimensionando);
+        document.addEventListener('touchmove', redimensionando, {
+            passive: false
+        });
+
+        document.addEventListener('mouseup', pararResize);
+        document.addEventListener('touchend', pararResize);
+    }
+
+    function redimensionando(e) {
+
+        e.preventDefault();
+
+        const clienteX = e.type === 'touchmove'
+            ? e.touches[0].clientX
+            : e.clientX;
+
+        const clienteY = e.type === 'touchmove'
+            ? e.touches[0].clientY
+            : e.clientY;
+
+        const diferencaX = clienteX - inicioX;
+        const diferencaY = clienteY - inicioY;
+
+        let novaLargura = larguraInicial + diferencaX;
+        let novaAltura = alturaInicial + diferencaY;
+
+        const larguraMinima = 200;
+        const alturaMinima = 120;
+
+        if (novaLargura < larguraMinima) {
+            novaLargura = larguraMinima;
+        }
+
+        if (novaAltura < alturaMinima) {
+            novaAltura = alturaMinima;
+        }
+
+        if (janela.offsetLeft + novaLargura > window.innerWidth) {
+            novaLargura = window.innerWidth - janela.offsetLeft;
+        }
+
+        if (janela.offsetTop + novaAltura > window.innerHeight) {
+            novaAltura = window.innerHeight - janela.offsetTop;
+        }
+
+        janela.style.width = novaLargura + 'px';
+        janela.style.height = novaAltura + 'px';
+    }
+
+    function pararResize() {
+
+        document.removeEventListener('mousemove', redimensionando);
+        document.removeEventListener('touchmove', redimensionando);
+
+        document.removeEventListener('mouseup', pararResize);
+        document.removeEventListener('touchend', pararResize);
+    }
 }
 
 function configurarArrasto(janela, barra) {
