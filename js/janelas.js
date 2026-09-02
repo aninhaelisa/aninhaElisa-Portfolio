@@ -14,91 +14,74 @@ const dadosJanelas = {
         altura: "250px"
     },
     habilidades: {
-        titulo: "Habilidades",
+        titulo: "Minhas Habilidades",
         conteudo: `
             <div class="janela-habilidades">
     
                 <div class="habilidades-cabecalho">
                     <img src="../src/icones/computador.png" alt="Computador">
                     <div>
-                        <strong>HABILIDADES</strong>
+                        <strong>MINHAS HABILIDADES TÉCNICAS</strong>
                         <span>Conhecimentos e ferramentas</span>
                     </div>
                 </div>
-    
                 <div class="habilidades-lista">
-    
                     <div class="habilidade">
                         <span>☑</span>
                         <span>Java</span>
                     </div>
-    
                     <div class="habilidade">
                         <span>☑</span>
                         <span>JDBC</span>
                     </div>
-    
                     <div class="habilidade">
                         <span>☑</span>
                         <span>Spring Boot</span>
                     </div>
-    
                     <div class="habilidade">
                         <span>☑</span>
                         <span>HTML</span>
                     </div>
-    
                     <div class="habilidade">
                         <span>☑</span>
                         <span>CSS</span>
                     </div>
-    
                     <div class="habilidade">
                         <span>☑</span>
                         <span>JavaScript</span>
                     </div>
-    
                     <div class="habilidade">
                         <span>☑</span>
                         <span>MySQL</span>
                     </div>
-    
                     <div class="habilidade">
                         <span>☑</span>
                         <span>PostgreSQL</span>
                     </div>
-    
                     <div class="habilidade">
                         <span>☑</span>
                         <span>Git</span>
                     </div>
-    
                     <div class="habilidade">
                         <span>☑</span>
                         <span>Linux</span>
                     </div>
-    
                     <div class="habilidade">
                         <span>☑</span>
                         <span>Figma</span>
                     </div>
-    
                     <div class="habilidade">
                         <span>☑</span>
                         <span>Canva</span>
                     </div>
-    
                     <div class="habilidade">
                         <span>☑</span>
                         <span>Trello</span>
                     </div>
-    
                 </div>
-    
                 <div class="habilidades-status">
                     13 habilidades encontradas
                 </div>
-    
             </div>
         `,
         largura: "350px",
@@ -108,53 +91,39 @@ const dadosJanelas = {
         titulo: "Music Player",
         conteudo: `
             <div class="player-retro">
-    
                 <div class="player-display">
-    
                     <div class="player-capa">
                         <img id="player-capa"
                              src="../src/icones/music.gif"
                              alt="Capa da música">
                     </div>
-    
                     <div class="player-info">
                         <strong id="player-titulo">Lofi Midnight Club</strong>
                         <span id="player-artista">alex-morgan</span>
-    
                         <div class="player-progresso">
                             <div class="player-progresso-barra"></div>
                         </div>
-    
                         <div class="player-tempo">
                             <span id="tempo-atual">00:00</span>
                             <span id="tempo-total">00:00</span>
                         </div>
                     </div>
-    
                 </div>
-    
-    
                 <div class="player-controles">
-    
-                    <button id="btn-anterior" title="Anterior">
+                 <button id="btn-anterior" title="Anterior">
                         ◀◀
                     </button>
-    
                     <button id="btn-play" title="Reproduzir">
                         ▶
                     </button>
-    
                     <button id="btn-proximo" title="Próxima">
                         ▶▶
                     </button>
     
                 </div>
     
-    
                 <div class="player-volume">
-    
                     <span>VOL</span>
-    
                     <input
                         type="range"
                         id="volume"
@@ -166,31 +135,25 @@ const dadosJanelas = {
     
                 </div>
     
-    
                 <div class="player-playlist">
-    
                     <div class="playlist-titulo">
                         PLAYLIST
                     </div>
-    
                     <button class="musica-item ativa" data-musica="0">
                         <span>01</span>
-                        <span>Lofi Midnight Club</span>
+                        <span>Algorithm - Sky Gienger</span>
                     </button>
-    
                     <button class="musica-item" data-musica="1">
                         <span>02</span>
-                        <span>Lofi Sunny Cafe</span>
+                        <span>Cheat Codes - Cinco</span>
                     </button>
-    
                     <button class="musica-item" data-musica="2">
                         <span>03</span>
-                        <span>Lofi Study Session</span>
+                        <span>Childhood Afternoons - Lloom</span>
                     </button>
-    
                     <button class="musica-item" data-musica="3">
                         <span>04</span>
-                        <span>Lofi Study Rainy Night</span>
+                        <span>Dreamin - Danijel Zambo</span>
                     </button>
                 </div>
                 <audio id="audio-player"></audio>
@@ -198,6 +161,165 @@ const dadosJanelas = {
             </div>
         `,
         largura: "380px",
+        altura: "390px"
+    },
+    nota: {
+        titulo: "Bloco de Notas",
+        conteudo: `
+            <div class="bloco-notas">
+                <div class="nota-menu">
+                    <button class="nota-salvar" title="Salvar">
+                        <img
+                            src="../src/icones/salvar.png"
+                            alt="Salvar"
+                        >
+                    </button>  
+                    <span class="nota-separador"></span>
+    
+                    <span class="nota-titulo-menu">
+                        Arquivo
+                    </span>
+                </div>
+                <div
+                    class="nota-editor"
+                    contenteditable="true"
+                    spellcheck="false"
+                ></div>
+             <div class="nota-status">
+                    <span class="nota-contador">
+                        0 caracteres
+                    </span>
+                    <span>
+                        Bloco de Notas
+                    </span>
+                </div>
+    
+            </div>
+        `,
+        largura: "500px",
+        altura: "400px"
+    },
+    camera: {
+        titulo: "Câmera",
+        conteudo: `
+            <div class="camera-retro">
+                <div class="camera-tela">
+                    <video
+                        class="camera-video"
+                        autoplay
+                        playsinline ></video>
+                    <canvas
+                        class="camera-canvas"
+                        hidden
+                    ></canvas>
+                    <img
+                        class="camera-foto"
+                        alt="Foto tirada"
+                        hidden >
+    
+                    <div class="camera-status">
+                        CAMERA READY
+                    </div>
+                </div>
+    
+    
+                <div class="camera-controles">
+    
+                    <button
+                        class="camera-tirar"
+                        title="Tirar foto"
+                    >
+                        ●
+                    </button>
+    
+                    <button
+                        class="camera-nova"
+                        title="Nova foto"
+                    >
+                        ↻
+                    </button>
+    
+                    <button
+                        class="camera-salvar"
+                        title="Salvar foto"
+                        disabled
+                    >
+                        <img
+                            src="../src/icones/salvar.png"
+                            alt="Salvar"
+                        >
+                    </button>
+    
+                </div>
+    
+    
+                <div class="camera-info">
+                    <span class="camera-contador">
+                        0 fotos
+                    </span>
+    
+                    <span>
+                        DIGITAL CAMERA
+                    </span>
+                </div>
+    
+            </div>
+        `,
+        largura: "420px",
+        altura: "390px"
+    },
+    blog: {
+        titulo: "ANINHAELISA BLOG",
+        conteudo: `
+            <div class="navegador-retro">
+    
+                <div class="browser-abas">
+                    <div class="browser-aba ativa">
+                        <span>🌐</span>
+                        ANINHAELISA BLOG
+                    </div>
+    
+                    <button class="browser-nova-aba">+</button>
+                </div>
+    
+                <div class="browser-barra">
+    
+                    <button class="browser-botao" title="Voltar">
+                        ◀
+                    </button>
+    
+                    <button class="browser-botao" title="Avançar">
+                        ▶
+                    </button>
+    
+                    <button
+                        class="browser-botao"
+                        title="Atualizar"
+                        onclick="document.querySelector('.browser-pagina').contentWindow.location.reload()">
+                        ↻
+                    </button>
+    
+                    <div class="browser-endereco">
+                        <span>🌐</span>
+                        http://aninhaelisa.local/blog.html
+                    </div>
+    
+                </div>
+    
+                <iframe
+                    class="browser-pagina"
+                    src="blog.html"
+                    title="ANINHAELISA BLOG">
+                </iframe>
+    
+                <div class="browser-status">
+                    <span>Documento concluído</span>
+                    <span>🌐 Internet</span>
+                </div>
+    
+            </div>
+        `,
+        largura: "420px",
         altura: "390px"
     }
 
@@ -245,6 +367,17 @@ document.querySelectorAll('.icones-janelas').forEach(botao => {
         criarJanela(idJanela);
     });
 });
+console.log(`
+    ╔══════════════════════════════════════╗
+    ║                                      ║
+    ║          ★ ANINHAELISA ★            ║
+    ║                                      ║
+    ║       WELCOME TO MY SOURCE CODE      ║
+    ║                                      ║
+    ║       Have fun exploring :)          ║
+    ║                                      ║
+    ╚══════════════════════════════════════╝
+    `);
 
 function criarJanela(id) {
     if (document.getElementById(`janela-${id}`)) {
@@ -307,7 +440,22 @@ function criarJanela(id) {
     if (id === "musicas") {
         iniciarPlayer();
     }
+    if (id === "nota") {
+        iniciarBlocoNotas();
+    }
+    if (id === "camera") {
+        iniciarCamera();
+    }
 }
+
+console.log(
+   `
+> SYSTEM STATUS: ONLINE
+> SOURCE CODE: ACCESSIBLE
+> USER: CURIOUS
+> SECRET: FOUND
+`
+);
 
 function focarECentralizarJanela(janela) {
     focarJanela(janela);
@@ -378,6 +526,7 @@ function configurarRedimensionamento(janela) {
         document.addEventListener('mouseup', pararResize);
         document.addEventListener('touchend', pararResize);
     }
+
 
     function redimensionando(e) {
 
@@ -590,25 +739,152 @@ function iniciarPlayer() {
     volume.addEventListener("input", () => {
         audio.volume = volume.value;
     });
-
     carregarMusica(0);
 
     function formatarTempo(segundos) {
-
         if (!segundos || isNaN(segundos)) {
             return "00:00";
         }
-
         const minutos =
             Math.floor(segundos / 60);
-
         const segundosRestantes =
             Math.floor(segundos % 60);
-
         return (
             String(minutos).padStart(2, "0") +
             ":" +
             String(segundosRestantes).padStart(2, "0")
         );
     }
+}
+
+function iniciarBlocoNotas() {
+    const editor = document.querySelector(".nota-editor");
+    if (!editor) return;
+    const salvar = document.querySelector(".nota-salvar");
+    const contador = document.querySelector(".nota-contador");
+    function atualizarContador() {
+        const texto = editor.innerText || "";
+        contador.textContent =
+            `${texto.length} caracteres`;
+    }
+
+    editor.addEventListener(
+        "input",
+        atualizarContador
+    );
+    salvar.addEventListener(
+        "click",
+        salvarNota
+    );
+    function salvarNota() {
+        const conteudo = editor.innerText;
+        const blob = new Blob(
+            [conteudo],
+            {
+                type: "text/plain;charset=utf-8"
+            }
+        );
+        const url =
+            URL.createObjectURL(blob);
+        const link =
+            document.createElement("a");
+        link.href = url;
+        link.download =
+            "minha-nota.txt";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+    }
+
+
+    atualizarContador();
+}
+
+function iniciarCamera() {
+    const video = document.querySelector(".camera-video");
+    const canvas = document.querySelector(".camera-canvas");
+    const foto = document.querySelector(".camera-foto");
+    const tirar = document.querySelector(".camera-tirar");
+    const nova = document.querySelector(".camera-nova");
+    const salvar = document.querySelector(".camera-salvar");
+    const status = document.querySelector(".camera-status");
+    const contador = document.querySelector(".camera-contador");
+
+    let stream = null;
+    let fotoAtual = null;
+    let quantidadeFotos = 0;
+    async function abrirCamera() {
+
+        try {
+            stream =
+                await navigator.mediaDevices.getUserMedia({
+                    video: true,
+                    audio: false
+                });
+            video.srcObject = stream;
+            status.textContent =
+                "CAMERA READY";
+
+        } catch (erro) {
+            console.error(erro);
+            status.textContent =
+                "CAMERA ERROR";
+            alert(
+                "Não foi possível acessar a câmera. " +
+                "Verifique se o navegador possui permissão."
+            );
+        }
+    }
+
+    tirar.addEventListener("click", () => {
+        if (!stream) return;
+        const largura = video.videoWidth;
+        const altura = video.videoHeight;
+        if (!largura || !altura) {
+            alert("A câmera ainda não está pronta. Tente novamente.");
+            return;
+        }
+        canvas.width = largura;
+        canvas.height = altura;
+        const contexto = canvas.getContext("2d");
+        contexto.save();
+        contexto.translate(largura, 0);
+        contexto.scale(-1, 1);
+        contexto.drawImage(video, 0, 0, largura, altura);
+        contexto.restore();
+        fotoAtual = canvas.toDataURL("image/png");
+        foto.src = fotoAtual;
+        video.style.display = "none";
+        foto.style.display = "block";
+        salvar.disabled = false;
+        quantidadeFotos++;
+        contador.textContent =
+            `${quantidadeFotos} foto${quantidadeFotos !== 1 ? "s" : ""}`;
+
+        status.textContent = "PHOTO CAPTURED";
+    });
+
+    nova.addEventListener("click", () => {
+        foto.src = "";
+        fotoAtual = null;
+        foto.style.display = "none";
+        video.style.display = "block";
+        salvar.disabled = true;
+        status.textContent = "CAMERA READY";
+    });
+
+    salvar.addEventListener("click", () => {
+        if (!fotoAtual) return;
+        const link = document.createElement("a");
+        link.href = fotoAtual;
+        link.download = `foto-camera-${Date.now()}.png`;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        status.textContent =
+            "PHOTO SAVED";
+    });
+
+    abrirCamera();
 }
