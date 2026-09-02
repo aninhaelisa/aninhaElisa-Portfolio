@@ -2,7 +2,7 @@
 
 :root {
     /*CORES*/
-    --cor-fundo: #48636a;
+    --cor-fundo: #121212;
     --cor-barras: #383838;
     --cor-texto: #fff;
 
@@ -20,7 +20,7 @@
     --width-padrao-janela: 200px;
     --height-padrao-janela: 400px;
     --height-padrao-icone: auto;
-    --width-padrao-icone: 4.5vh;
+    --width-padrao-icone: 5.5vh;
 
     /*BORDAS*/
     --borda-top: 2px solid #ffffff;
@@ -40,15 +40,26 @@ body {
     overflow: hidden;
 
 }
-
 body {
-    background-image: url("../src/fundo.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--cor-fundo);
-    font-family: var(--font-texto);
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: #131313;
 }
 
+#video-fundo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+
+    z-index: -1;
+}
 footer {
     width: 100%;
     min-height: 20px;

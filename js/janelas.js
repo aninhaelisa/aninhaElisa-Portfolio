@@ -196,8 +196,8 @@ const dadosJanelas = {
     
             </div>
         `,
-        largura: "500px",
-        altura: "400px"
+        largura: "350px",
+        altura: "300px"
     },
     camera: {
         titulo: "Câmera",
@@ -265,8 +265,8 @@ const dadosJanelas = {
     
             </div>
         `,
-        largura: "420px",
-        altura: "390px"
+        largura: "350px",
+        altura: "300px"
     },
     blog: {
         titulo: "ANINHAELISA BLOG",
@@ -319,10 +319,541 @@ const dadosJanelas = {
     
             </div>
         `,
-        largura: "420px",
-        altura: "390px"
+        largura: "350px",
+        altura: "300px"
+    },
+    paint: {
+        titulo: "Paint",
+        conteudo: `
+            <div class="paint-retro">
+                <div class="paint-menu">
+                    <span>Arquivo</span>
+                    <span>Editar</span>
+                    <span>Exibir</span>
+                    <span>Imagem</span>
+                    <span>Cores</span>
+                    <span>Ajuda</span>
+                </div>
+                <div class="paint-ferramentas">
+                    <button class="paint-ferramenta ativa" data-ferramenta="pincel" title="Pincel">
+                        ✎
+                    </button>
+                    <button class="paint-ferramenta" data-ferramenta="borracha" title="Borracha">
+                        ▱
+                    </button>
+                    <button class="paint-ferramenta" data-ferramenta="limpar" title="Limpar">
+                        ✕
+                    </button>
+                    <div class="paint-separador"></div>
+                    <label class="paint-tamanho">
+                        Tamanho:
+                        <select class="paint-tamanho-select">
+                            <option value="2">2px</option>
+                            <option value="4" selected>4px</option>
+                            <option value="8">8px</option>
+                            <option value="12">12px</option>
+                            <option value="20">20px</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="paint-area">
+                    <canvas class="paint-canvas"></canvas>
+                </div>
+                <div class="paint-cores">   
+                    <div class="paint-cor-atual"></div>
+                  <button class="paint-cor" data-cor="#000000" style="background:#000000"></button>
+                    <button class="paint-cor" data-cor="#ffffff" style="background:#ffffff"></button>
+                   <button class="paint-cor" data-cor="#808080" style="background:#808080"></button>
+                    <button class="paint-cor" data-cor="#c0c0c0" style="background:#c0c0c0"></button>  
+                    <button class="paint-cor" data-cor="#800000" style="background:#800000"></button>
+                    <button class="paint-cor" data-cor="#ff0000" style="background:#ff0000"></button>
+                    <button class="paint-cor" data-cor="#808000" style="background:#808000"></button>
+                    <button class="paint-cor" data-cor="#ffff00" style="background:#ffff00"></button>
+                    <button class="paint-cor" data-cor="#008000" style="background:#008000"></button>
+                    <button class="paint-cor" data-cor="#00ff00" style="background:#00ff00"></button>
+                    <button class="paint-cor" data-cor="#008080" style="background:#008080"></button>
+                    <button class="paint-cor" data-cor="#00ffff" style="background:#00ffff"></button>
+                    <button class="paint-cor" data-cor="#000080" style="background:#000080"></button>
+                    <button class="paint-cor" data-cor="#0000ff" style="background:#0000ff"></button>
+                    <button class="paint-cor" data-cor="#800080" style="background:#800080"></button>
+                    <button class="paint-cor" data-cor="#ff00ff" style="background:#ff00ff"></button>
+                    <button class="paint-cor" data-cor="#ffa500" style="background:#ffa500"></button>
+                    <button class="paint-cor" data-cor="#a52a2a" style="background:#a52a2a"></button>
+                    <button class="paint-cor" data-cor="#ffc0cb" style="background:#ffc0cb"></button>
+                    <button class="paint-cor" data-cor="#0080ff" style="background:#0080ff"></button> 
+                  <label class="paint-cor-personalizada">
+                        +
+                        <input type="color" class="paint-color-picker" value="#000000">
+                    </label>  
+                </div>
+                <div class="paint-status">
+                    <span class="paint-status-text">Pronto</span>
+                    <span class="paint-coordenadas">0, 0</span>
+                </div>
+                <div class="paint-salvar-area">
+                    <button class="paint-salvar">
+                        💾 Salvar
+                    </button>
+                </div>
+            </div>
+        `,
+        largura: "350px",
+        altura: "300px"
+    },
+    propriedades: {
+        titulo: "Propriedades do Sistema",
+        conteudo: `
+            <div class="propriedades-retro">
+    
+                <div class="prop-cabecalho">
+                    <div class="prop-logo">▣</div>
+    
+                    <div>
+                        <div class="prop-titulo">
+                            Propriedades do Sistema
+                        </div>
+    
+                        <div class="prop-subtitulo">
+                            ANINHAELISA SYSTEM
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="prop-linha"></div>
+    
+                <div class="prop-conteudo">
+    
+                    <div class="prop-secao">
+                        <strong>Informações do computador</strong>
+    
+                        <div class="prop-item">
+                            <span>Nome da máquina:</span>
+                            <b>ANINHA-PC</b>
+                        </div>
+    
+                        <div class="prop-item">
+                            <span>Usuário:</span>
+                            <b>VISITANTE</b>
+                        </div>
+    
+                        <div class="prop-item">
+                            <span>Sistema:</span>
+                            <b>AninhaOS 98 SE</b>
+                        </div>
+    
+                        <div class="prop-item">
+                            <span>Processador:</span>
+                            <b>Pentium III 800 MHz</b>
+                        </div>
+    
+                        <div class="prop-item">
+                            <span>Memória:</span>
+                            <b>128 MB RAM</b>
+                        </div>
+                    </div>
+    
+                    <div class="prop-secao">
+                        <strong>Informações de rede</strong>
+    
+                        <div class="prop-item">
+                            <span>Endereço IP:</span>
+                            <b>192.168.0.42</b>
+                        </div>
+    
+                        <div class="prop-item">
+                            <span>Gateway:</span>
+                            <b>192.168.0.1</b>
+                        </div>
+    
+                        <div class="prop-item">
+                            <span>Status:</span>
+                            <b class="prop-online">ONLINE</b>
+                        </div>
+                    </div>
+    
+                    <div class="prop-secao">
+                        <strong>Informações do navegador</strong>
+    
+                        <div class="prop-item">
+                            <span>Navegador:</span>
+                            <b class="prop-navegador">Detectando...</b>
+                        </div>
+    
+                        <div class="prop-item">
+                            <span>Idioma:</span>
+                            <b class="prop-idioma">Detectando...</b>
+                        </div>
+    
+                        <div class="prop-item">
+                            <span>Resolução:</span>
+                            <b class="prop-resolucao">Detectando...</b>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="prop-aviso">
+                    ⚠ SISTEMA MONITORADO PELO ADMINISTRADOR
+                </div>
+    
+                <div class="prop-botoes">
+                    <button class="prop-ok">OK</button>
+                </div>
+    
+            </div>
+        `,
+        largura: "350px",
+        altura: "300px"
+    },
+    configuracoes: {
+        titulo: "Configurações",
+        conteudo: `
+    <div class="config-retro">
+        <div class="config-menu">
+            <span>Configurações</span>
+            <span>Exibir</span>
+            <span>Sistema</span>
+            <span>Ajuda</span>
+        </div>
+    
+        <div class="config-corpo">
+            <div class="config-sidebar">
+                <button class="config-item ativo" data-config="aparencia">🖥 Aparência</button>
+                <button class="config-item" data-config="efeitos">✨ Efeitos</button>
+                <button class="config-item" data-config="som">🔊 Som</button>
+                <button class="config-item" data-config="sistema">⚙ Sistema</button>
+            </div>
+    
+            <div class="config-painel">
+                <!-- APARÊNCIA -->
+                <div class="config-pagina ativa" data-pagina="aparencia">
+                    <h3>Aparência</h3>
+    
+                    <div class="config-grupo">
+                        <strong>Tema da interface</strong>
+                        <label><input type="radio" name="tema-config" value="retro" checked> Retrô clássico</label>
+                        <label><input type="radio" name="tema-config" value="rosa"> Rosa Aninha</label>
+                        <label><input type="radio" name="tema-config" value="azul"> Azul clássico</label>
+                    </div>
+    
+                    <div class="config-grupo">
+                        <strong>Cor de destaque</strong>
+                        <div class="config-cores">
+                            <button class="config-cor" data-cor="#000080" style="background:#000080"></button>
+                            <button class="config-cor" data-cor="#800080" style="background:#800080"></button>
+                            <button class="config-cor" data-cor="#800000" style="background:#800000"></button>
+                            <button class="config-cor" data-cor="#008080" style="background:#008080"></button>
+                            <button class="config-cor" data-cor="#008000" style="background:#008000"></button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- EFEITOS -->
+                <div class="config-pagina" data-pagina="efeitos">
+                    <h3>Efeitos visuais</h3>
+    
+                    <div class="config-grupo">
+                        <label class="config-checkbox">
+                            <input type="checkbox" class="config-animacoes" checked>
+                            Ativar animações
+                        </label>
+    
+                        <label class="config-checkbox">
+                            <input type="checkbox" class="config-som-janelas" checked>
+                            Sons das janelas
+                        </label>
+    
+                        <label class="config-checkbox">
+                            <input type="checkbox" class="config-brilho">
+                            Efeito CRT
+                        </label>
+    
+                        <label class="config-checkbox">
+                            <input type="checkbox" class="config-pixel" checked>
+                            Renderização pixelada
+                        </label>
+                    </div>
+    
+                    <div class="config-grupo">
+                        <strong>Velocidade das animações</strong>
+                        <select class="config-velocidade">
+                            <option value="slow">Lenta</option>
+                            <option value="normal" selected>Normal</option>
+                            <option value="fast">Rápida</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <!-- SOM -->
+                <div class="config-pagina" data-pagina="som">
+                    <h3>Som</h3>
+    
+                    <div class="config-grupo">
+                        <strong>Volume geral</strong>
+    
+                        <div class="config-volume">
+                            <span>🔈</span>
+                            <input type="range" class="config-volume-range" min="0" max="100" value="70">
+                            <span>🔊</span>
+                        </div>
+    
+                        <div class="config-volume-valor">70%</div>
+                    </div>
+    
+                    <div class="config-grupo">
+                        <label class="config-checkbox">
+                            <input type="checkbox" class="config-mudo">
+                            Silenciar todos os sons
+                        </label>
+                    </div>
+                </div>
+    
+                <!-- SISTEMA -->
+                <div class="config-pagina" data-pagina="sistema">
+                    <h3>Sistema</h3>
+    
+                    <div class="config-grupo">
+                        <div class="config-info">
+                            <span>Versão:</span>
+                            <strong>AninhaOS 98</strong>
+                        </div>
+    
+                        <div class="config-info">
+                            <span>Build:</span>
+                            <strong>98.09.2026</strong>
+                        </div>
+    
+                        <div class="config-info">
+                            <span>Kernel:</span>
+                            <strong>ANX-KERNEL 1.0</strong>
+                        </div>
+    
+                        <div class="config-info">
+                            <span>Status:</span>
+                            <strong class="config-online">ONLINE</strong>
+                        </div>
+                    </div>
+    
+                    <div class="config-grupo config-aviso">
+                        <strong>⚠ AVISO</strong>
+                        <p>
+                            Algumas configurações são apenas
+                            experimentais e podem não funcionar
+                            em todos os navegadores.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="config-rodape">
+            <button class="config-aplicar">Aplicar</button>
+            <button class="config-fechar">OK</button>
+        </div>
+    </div>
+        `,
+        largura: "350px",
+        altura: "300px"
+    },
+    curriculo: {
+        titulo: "Currículo - Ana Elisa",
+        conteudo: `
+    <div class="curriculo-retro">
+        <div class="curriculo-menu">
+            <span>Arquivo</span>
+            <span>Editar</span>
+            <span>Exibir</span>
+            <span>Ajuda</span>
+        </div>
+    
+        <div class="curriculo-ferramentas">
+            <button class="curriculo-btn" title="Imprimir">🖨</button>
+            <button class="curriculo-btn curriculo-salvar" title="Salvar">💾</button>
+            <div class="curriculo-separador"></div>
+            <span class="curriculo-status-top">DOCUMENTO: CURRICULO.TXT</span>
+        </div>
+    
+        <div class="curriculo-pagina">
+            <header class="curriculo-cabecalho">
+            <img src="../src/icones/eu.jpg" alt="Eu" class="curriculo-foto">
+                <div>
+                    <h1>ANA ELISA</h1>
+                    <p class="curriculo-cargo">DESENVOLVEDORA JAVA</p>
+                </div>
+    
+                <div class="curriculo-id">
+                    <span>ANINHA-PC</span>
+                    <span>CURRÍCULO.EXE</span>
+                </div>
+            </header>
+    
+            <div class="curriculo-linha"></div>
+    
+            <section class="curriculo-secao">
+                <h2>01. PERFIL</h2>
+                <p>
+                    Estudante de Engenharia de Software com foco
+                    em desenvolvimento Java e interesse em
+                    desenvolvimento backend.
+                </p>
+                <p>
+                    Tenho experiência prática com Java, bancos
+                    de dados, APIs, desenvolvimento web e
+                    versionamento de código.
+                </p>
+            </section>
+    
+            <section class="curriculo-secao">
+                <h2>02. FORMAÇÃO</h2>
+                <div class="curriculo-item">
+                    <div>
+                        <strong>Engenharia de Software</strong>
+                        <p>UNIPAR — Universidade Paranaense</p>
+                    </div>
+                    <span>2025 — ATUAL</span>
+                </div>
+            </section>
+    
+            <section class="curriculo-secao">
+                <h2>03. CONHECIMENTOS</h2>
+    
+                <div class="curriculo-grid">
+                    <div>
+                        <strong>PROGRAMMING</strong>
+                        <p>Java</p>
+                        <p>JavaScript</p>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                    </div>
+    
+                    <div>
+                        <strong>BACKEND</strong>
+                        <p>JDBC</p>
+                        <p>Spring Boot</p>
+                        <p>JPA</p>
+                        <p>APIs REST</p>
+                    </div>
+    
+                    <div>
+                        <strong>DATABASE</strong>
+                        <p>MySQL</p>
+                        <p>PostgreSQL</p>
+                        <p>SQL</p>
+                    </div>
+    
+                    <div>
+                        <strong>TOOLS</strong>
+                        <p>Git</p>
+                        <p>GitHub</p>
+                        <p>Linux</p>
+                        <p>VS Code</p>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="curriculo-secao">
+                <h2>04. PROJETOS</h2>
+    
+                <div class="curriculo-projeto">
+                    <strong>JAVA LEARNING</strong>
+                    <p>
+                        Repositório de estudos e exercícios
+                        desenvolvidos durante minha aprendizagem
+                        de Java.
+                    </p>
+                    <span>JAVA / GIT / GITHUB</span>
+                </div>
+    
+                <div class="curriculo-projeto">
+                    <strong>CONTROLE DE GLICEMIA</strong>
+                    <p>
+                        Aplicação Java para registro, consulta
+                        e análise de dados armazenados em
+                        arquivos.
+                    </p>
+                    <span>JAVA / FILES / CSV / TXT</span>
+                </div>
+    
+                <div class="curriculo-projeto">
+                    <strong>PORTFÓLIO ANINHAELISA</strong>
+                    <p>
+                        Portfólio pessoal desenvolvido com uma
+                        interface inspirada em computadores
+                        antigos.
+                    </p>
+                    <span>HTML / CSS / JAVASCRIPT</span>
+                </div>
+            </section>
+    
+            <section class="curriculo-secao">
+                <h2>05. FERRAMENTAS</h2>
+    
+                <div class="curriculo-tags">
+                    <span>JAVA</span>
+                    <span>SPRING</span>
+                    <span>MYSQL</span>
+                    <span>POSTGRESQL</span>
+                    <span>GIT</span>
+                    <span>LINUX</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JAVASCRIPT</span>
+                    <span>FIGMA</span>
+                    <span>CANVA</span>
+                </div>
+            </section>
+    
+            <section class="curriculo-secao">
+                <h2>06. CONTATO</h2>
+    
+                <div class="curriculo-contato">
+                    <p>EMAIL: elisaana.2019.2006@email.com</p>
+                    <p>GITHUB: github.com/aninhaelisa</p>
+                    <p>LINKEDIN: linkedin.com/in/ana-elisa-00477a3a8</p>
+                </div>
+            </section>
+    
+            <footer class="curriculo-footer">
+                <span>★ ANINHAELISA SYSTEM ★</span>
+                <span>CURRÍCULO.TXT</span>
+                <span>© 2026</span>
+            </footer>
+        </div>
+    
+        <div class="curriculo-status">
+            <span>Documento concluído</span>
+            <span>Página 1</span>
+            <span>UTF-8</span>
+        </div>
+    </div>
+        `,
+        largura: "350px",
+        altura: "300px"
+    },
+    compilador: {
+        titulo: "Java Compiler",
+        conteudo: `
+            <div class="compilador-retro">
+                <div class="compilador-cabecalho">
+                     ANINHA JAVA DEVELOPMENT ENVIRONMENT
+                </div>
+    
+                <div class="compilador-editor">
+                    <iframe
+                        src="https://onecompiler.com/embed/java"
+                        frameborder="0">
+                    </iframe>
+                </div>
+    
+                <div class="compilador-status">
+                    Pronto.
+                </div>
+            </div>
+        `,
+        largura: "350px",
+        altura: "300px"
     }
-
 };
 
 const playlist = [
@@ -429,10 +960,16 @@ function criarJanela(id) {
 
         containerAbas.appendChild(novaAba);
     }
-    novaJanela.querySelector('.btn-fechar').addEventListener('click', () => {
+    function fecharEstaJanela() {
         janelasAbertas = janelasAbertas.filter(item => item !== id);
         fecharJanelaCompleto(id);
-    });
+    }
+
+    novaJanela.querySelector('.btn-fechar').addEventListener('click', fecharEstaJanela);
+
+    if (id === "propriedades") {
+        novaJanela.querySelector('.prop-ok').addEventListener('click', fecharEstaJanela);
+    }
     novaJanela.addEventListener('mousedown', () => focarJanela(novaJanela));
     novaJanela.addEventListener('touchstart', () => focarJanela(novaJanela));
     configurarArrasto(novaJanela, novaJanela.querySelector('.janela-barra'));
@@ -446,10 +983,23 @@ function criarJanela(id) {
     if (id === "camera") {
         iniciarCamera();
     }
+    if (id === "paint") {
+        iniciarPaint(novaJanela);
+    }
+    if (id === "propriedades") {
+        iniciarPropriedades(novaJanela);
+    }
+    if (id === "configuracoes") {
+        iniciarConfiguracoes(novaJanela);
+    }
+    if (id === "curriculo") {
+        iniciarCurriculo(novaJanela);
+    }
+
 }
 
 console.log(
-   `
+    `
 > SYSTEM STATUS: ONLINE
 > SOURCE CODE: ACCESSIBLE
 > USER: CURIOUS
@@ -460,14 +1010,15 @@ console.log(
 function focarECentralizarJanela(janela) {
     focarJanela(janela);
 
-    const larguraTela = window.innerWidth;
-    const alturaTela = window.innerHeight;
+    requestAnimationFrame(() => {
+        const larguraTela = window.innerWidth;
+        const alturaTela = window.innerHeight;
+        const larguraJanela = janela.offsetWidth || parseInt(janela.style.width) || 350;
+        const alturaJanela = janela.offsetHeight || parseInt(janela.style.height) || 300;
 
-    const larguraJanela = janela.offsetWidth || parseInt(janela.style.width);
-    const alturaJanela = janela.offsetHeight || parseInt(janela.style.height);
-
-    janela.style.left = `${(larguraTela - larguraJanela) / 2}px`;
-    janela.style.top = `${(alturaTela - alturaJanela) / 2}px`;
+        janela.style.left = `${(larguraTela - larguraJanela) / 2}px`;
+        janela.style.top = `${(alturaTela - alturaJanela) / 2}px`;
+    });
 }
 function focarJanela(janela) {
     zIndexAtual++;
@@ -888,3 +1439,299 @@ function iniciarCamera() {
 
     abrirCamera();
 }
+
+function iniciarPaint(janela) {
+    const canvas = janela.querySelector(".paint-canvas");
+    const contexto = canvas.getContext("2d");
+    const botoesCor = janela.querySelectorAll(".paint-cor");
+    const picker = janela.querySelector(".paint-color-picker");
+    const corAtualElemento = janela.querySelector(".paint-cor-atual");
+    const botoesFerramenta = janela.querySelectorAll(".paint-ferramenta");
+    const tamanhoSelect = janela.querySelector(".paint-tamanho-select");
+    const salvar = janela.querySelector(".paint-salvar");
+    const status = janela.querySelector(".paint-status-text");
+    const coordenadas = janela.querySelector(".paint-coordenadas");
+
+    let desenhando = false;
+    let corAtual = "#000000";
+    let tamanho = 4;
+    let ferramenta = "pincel";
+
+    function prepararCanvas() {
+        const largura = canvas.clientWidth;
+        const altura = canvas.clientHeight;
+        if (!largura || !altura) return;
+        const imagemAnterior = canvas.width && canvas.height
+            ? contexto.getImageData(0, 0, canvas.width, canvas.height)
+            : null;
+        canvas.width = largura;
+        canvas.height = altura;
+        contexto.fillStyle = "#ffffff";
+        contexto.fillRect(0, 0, canvas.width, canvas.height);
+
+        if (imagemAnterior) {
+            contexto.putImageData(imagemAnterior, 0, 0);
+        }
+    }
+
+    prepararCanvas();
+
+    function obterPosicao(e) {
+        const rect = canvas.getBoundingClientRect();
+        const escalaX = canvas.width / rect.width;
+        const escalaY = canvas.height / rect.height;
+        return {
+            x: (e.clientX - rect.left) * escalaX,
+            y: (e.clientY - rect.top) * escalaY
+        };
+    }
+
+    function desenhar(e) {
+        if (!desenhando) return;
+        const posicao = obterPosicao(e);
+        if (ferramenta === "borracha") {
+            contexto.strokeStyle = "#ffffff";
+        } else {
+            contexto.strokeStyle = corAtual;
+        }
+        contexto.lineWidth = tamanho;
+        contexto.lineCap = "round";
+        contexto.lineJoin = "round";
+        contexto.lineTo(posicao.x, posicao.y);
+        contexto.stroke();
+        contexto.beginPath();
+        contexto.moveTo(posicao.x, posicao.y);
+        coordenadas.textContent =
+            `${Math.round(posicao.x)}, ${Math.round(posicao.y)}`;
+    }
+
+    canvas.addEventListener("pointerdown", (e) => {
+        desenhando = true;
+        canvas.setPointerCapture(e.pointerId);
+        const posicao = obterPosicao(e);
+        contexto.beginPath();
+        contexto.moveTo(posicao.x, posicao.y);
+        contexto.strokeStyle =
+            ferramenta === "borracha"
+                ? "#ffffff"
+                : corAtual;
+        contexto.lineWidth = tamanho;
+        contexto.lineCap = "round";
+        contexto.lineJoin = "round";
+        contexto.lineTo(posicao.x + 0.1, posicao.y + 0.1);
+        contexto.stroke();
+        contexto.beginPath();
+        contexto.moveTo(posicao.x, posicao.y);
+        status.textContent = "Desenhando...";
+    });
+    canvas.addEventListener("pointermove", desenhar);
+    canvas.addEventListener("pointerup", () => {
+        desenhando = false;
+        contexto.closePath();
+        status.textContent = "Pronto";
+    });
+
+    canvas.addEventListener("pointerleave", () => {
+        if (!desenhando) {
+            coordenadas.textContent = "0, 0";
+        }
+    });
+
+    botoesCor.forEach(botao => {
+        botao.addEventListener("click", () => {
+            corAtual = botao.dataset.cor;
+            corAtualElemento.style.background = corAtual;
+            ferramenta = "pincel";
+            botoesFerramenta.forEach(botao =>
+                botao.classList.remove("ativa")
+            );
+            const pincel = janela.querySelector(
+                '[data-ferramenta="pincel"]'
+            );
+            pincel.classList.add("ativa");
+            status.textContent = `Cor: ${corAtual}`;
+        });
+
+    });
+
+    picker.addEventListener("input", () => {
+        corAtual = picker.value;
+        corAtualElemento.style.background = corAtual;
+        ferramenta = "pincel";
+        botoesFerramenta.forEach(botao =>
+            botao.classList.remove("ativa")
+        );
+        janela
+            .querySelector('[data-ferramenta="pincel"]')
+            .classList.add("ativa");
+        status.textContent = `Cor: ${corAtual}`;
+    });
+    botoesFerramenta.forEach(botao => {
+
+        botao.addEventListener("click", () => {
+            ferramenta = botao.dataset.ferramenta;
+            botoesFerramenta.forEach(botao =>
+                botao.classList.remove("ativa")
+            );
+            botao.classList.add("ativa");
+            if (ferramenta === "pincel") {
+                status.textContent = "Pincel";
+            }
+            if (ferramenta === "borracha") {
+                status.textContent = "Borracha";
+            }
+            if (ferramenta === "limpar") {
+                const confirmar =
+                    confirm("Limpar toda a imagem?");
+
+                if (confirmar) {
+                    contexto.fillStyle = "#ffffff";
+                    contexto.fillRect(
+                        0,
+                        0,
+                        canvas.width,
+                        canvas.height
+                    );
+                    status.textContent = "Imagem limpa";
+                }
+                ferramenta = "pincel";
+                botoesFerramenta.forEach(botao =>
+                    botao.classList.remove("ativa")
+                );
+                janela
+                    .querySelector('[data-ferramenta="pincel"]')
+                    .classList.add("ativa");
+            }
+        });
+    });
+
+    tamanhoSelect.addEventListener("change", () => {
+        tamanho = Number(tamanhoSelect.value);
+        status.textContent =
+            `Pincel: ${tamanho}px`;
+    });
+    salvar.addEventListener("click", () => {
+        const link = document.createElement("a");
+        link.download =
+            `aninhaelisa-paint-${Date.now()}.png`;
+        link.href = canvas.toDataURL("image/png");
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        status.textContent = "Imagem salva!";
+    });
+
+}
+
+function iniciarPropriedades(janela) {
+    const navegador =
+        janela.querySelector(".prop-navegador");
+    const idioma =
+        janela.querySelector(".prop-idioma");
+    const resolucao =
+        janela.querySelector(".prop-resolucao");
+
+    const ua = navigator.userAgent;
+    let nomeNavegador = "Navegador desconhecido";
+    if (ua.includes("Chrome")) {
+        nomeNavegador = "Google Chrome";
+    } else if (ua.includes("Firefox")) {
+        nomeNavegador = "Mozilla Firefox";
+    } else if (ua.includes("Edg")) {
+        nomeNavegador = "Microsoft Edge";
+    }
+
+    navegador.textContent = nomeNavegador;
+    idioma.textContent =
+        navigator.language || "pt-BR";
+    resolucao.textContent =
+        `${window.screen.width} × ${window.screen.height}`;
+}
+
+function iniciarConfiguracoes(janela) {
+    const itens = janela.querySelectorAll(".config-item");
+    const paginas = janela.querySelectorAll(".config-pagina");
+    const volume = janela.querySelector(".config-volume-range");
+    const volumeValor = janela.querySelector(".config-volume-valor");
+    const mudo = janela.querySelector(".config-mudo");
+    const aplicar = janela.querySelector(".config-aplicar");
+    const fechar = janela.querySelector(".config-fechar");
+
+    itens.forEach(item => {
+        item.addEventListener("click", () => {
+            const config = item.dataset.config;
+
+            itens.forEach(i => i.classList.remove("ativo"));
+            paginas.forEach(pagina => pagina.classList.remove("ativa"));
+
+            item.classList.add("ativo");
+
+            const pagina = janela.querySelector(`[data-pagina="${config}"]`);
+
+            if (pagina) {
+                pagina.classList.add("ativa");
+            }
+        });
+    });
+
+    volume.addEventListener("input", () => {
+        volumeValor.textContent = `${volume.value}%`;
+    });
+
+    mudo.addEventListener("change", () => {
+        volume.disabled = mudo.checked;
+
+        if (mudo.checked) {
+            volumeValor.textContent = "MUDO";
+        } else {
+            volumeValor.textContent = `${volume.value}%`;
+        }
+    });
+
+    janela.querySelectorAll(".config-cor").forEach(botao => {
+        botao.addEventListener("click", () => {
+            const cor = botao.dataset.cor;
+
+            document.documentElement.style.setProperty(
+                "--cor-destaque",
+                cor
+            );
+        });
+    });
+
+    aplicar.addEventListener("click", () => {
+        aplicar.classList.add("ativo");
+
+        setTimeout(() => {
+            aplicar.classList.remove("ativo");
+        }, 150);
+    });
+
+    fechar.addEventListener("click", () => {
+        janelasAbertas = janelasAbertas.filter(
+            item => item !== "configuracoes"
+        );
+
+        fecharJanelaCompleto("configuracoes");
+    });
+}
+function iniciarCurriculo(janela) {
+    const salvar = janela.querySelector(".curriculo-salvar");
+
+    salvar.addEventListener("click", () => {
+        const conteudo = janela.querySelector(".curriculo-pagina").innerText;
+
+        const arquivo = new Blob([conteudo], {
+            type: "text/plain;charset=utf-8"
+        });
+
+        const link = document.createElement("a");
+
+        link.href = URL.createObjectURL(arquivo);
+        link.download = "Ana-Elisa-Curriculo.txt";
+        link.click();
+
+        URL.revokeObjectURL(link.href);
+    });
+}
+
