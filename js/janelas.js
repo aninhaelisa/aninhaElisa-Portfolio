@@ -16,37 +16,223 @@ const dadosJanelas = {
     habilidades: {
         titulo: "Habilidades",
         conteudo: `
-        <div class="janela-habilidades">
-        <h3>MINHAS HABILIDADES</h3>
-        <ul> 
-        <p>✔ Java</p>
-        <p>✔ JDBC</p>
-        <p>✔ CSS</p>
-        <p>✔ Spring Boot</p>
-        <p>✔ Linux</p>
-        <p>✔ MySQL</p>
-        <p>✔ PostgreSQL</p>
-        <p>✔ Java Script</p>
-        <p>✔ Canva</p>
-        <p>✔ Figma</p>
-        <p>✔ Trello</p>
-        <p>✔ HTML</p>
-        <p>✔ GIT</p>
-        </ul>
-        </div>
+            <div class="janela-habilidades">
+    
+                <div class="habilidades-cabecalho">
+                    <img src="../src/icones/computador.png" alt="Computador">
+                    <div>
+                        <strong>HABILIDADES</strong>
+                        <span>Conhecimentos e ferramentas</span>
+                    </div>
+                </div>
+    
+                <div class="habilidades-lista">
+    
+                    <div class="habilidade">
+                        <span>☑</span>
+                        <span>Java</span>
+                    </div>
+    
+                    <div class="habilidade">
+                        <span>☑</span>
+                        <span>JDBC</span>
+                    </div>
+    
+                    <div class="habilidade">
+                        <span>☑</span>
+                        <span>Spring Boot</span>
+                    </div>
+    
+                    <div class="habilidade">
+                        <span>☑</span>
+                        <span>HTML</span>
+                    </div>
+    
+                    <div class="habilidade">
+                        <span>☑</span>
+                        <span>CSS</span>
+                    </div>
+    
+                    <div class="habilidade">
+                        <span>☑</span>
+                        <span>JavaScript</span>
+                    </div>
+    
+                    <div class="habilidade">
+                        <span>☑</span>
+                        <span>MySQL</span>
+                    </div>
+    
+                    <div class="habilidade">
+                        <span>☑</span>
+                        <span>PostgreSQL</span>
+                    </div>
+    
+                    <div class="habilidade">
+                        <span>☑</span>
+                        <span>Git</span>
+                    </div>
+    
+                    <div class="habilidade">
+                        <span>☑</span>
+                        <span>Linux</span>
+                    </div>
+    
+                    <div class="habilidade">
+                        <span>☑</span>
+                        <span>Figma</span>
+                    </div>
+    
+                    <div class="habilidade">
+                        <span>☑</span>
+                        <span>Canva</span>
+                    </div>
+    
+                    <div class="habilidade">
+                        <span>☑</span>
+                        <span>Trello</span>
+                    </div>
+    
+                </div>
+    
+                <div class="habilidades-status">
+                    13 habilidades encontradas
+                </div>
+    
+            </div>
         `,
         largura: "350px",
-        altura: "250px"
-    }
+        altura: "300px"
+    },
+    musicas: {
+        titulo: "Music Player",
+        conteudo: `
+            <div class="player-retro">
     
+                <div class="player-display">
+    
+                    <div class="player-capa">
+                        <img id="player-capa"
+                             src="../src/icones/music.gif"
+                             alt="Capa da música">
+                    </div>
+    
+                    <div class="player-info">
+                        <strong id="player-titulo">Lofi Midnight Club</strong>
+                        <span id="player-artista">alex-morgan</span>
+    
+                        <div class="player-progresso">
+                            <div class="player-progresso-barra"></div>
+                        </div>
+    
+                        <div class="player-tempo">
+                            <span id="tempo-atual">00:00</span>
+                            <span id="tempo-total">00:00</span>
+                        </div>
+                    </div>
+    
+                </div>
+    
+    
+                <div class="player-controles">
+    
+                    <button id="btn-anterior" title="Anterior">
+                        ◀◀
+                    </button>
+    
+                    <button id="btn-play" title="Reproduzir">
+                        ▶
+                    </button>
+    
+                    <button id="btn-proximo" title="Próxima">
+                        ▶▶
+                    </button>
+    
+                </div>
+    
+    
+                <div class="player-volume">
+    
+                    <span>VOL</span>
+    
+                    <input
+                        type="range"
+                        id="volume"
+                        min="0"
+                        max="1"
+                        step="0.01"
+                        value="0.5"
+                    >
+    
+                </div>
+    
+    
+                <div class="player-playlist">
+    
+                    <div class="playlist-titulo">
+                        PLAYLIST
+                    </div>
+    
+                    <button class="musica-item ativa" data-musica="0">
+                        <span>01</span>
+                        <span>Lofi Midnight Club</span>
+                    </button>
+    
+                    <button class="musica-item" data-musica="1">
+                        <span>02</span>
+                        <span>Lofi Sunny Cafe</span>
+                    </button>
+    
+                    <button class="musica-item" data-musica="2">
+                        <span>03</span>
+                        <span>Lofi Study Session</span>
+                    </button>
+    
+                    <button class="musica-item" data-musica="3">
+                        <span>04</span>
+                        <span>Lofi Study Rainy Night</span>
+                    </button>
+                </div>
+                <audio id="audio-player"></audio>
+    
+            </div>
+        `,
+        largura: "380px",
+        altura: "390px"
+    }
+
 };
 
-let zIndexAtual = 1000; 
-let janelasAbertas = []; 
+const playlist = [
+    {
+        titulo: "Algorithm",
+        artista: "Sky Gienger",
+        arquivo: "../src/musicas/algorithm-sky-gienger-main-version-01-28-12896.mp3"
+    },
+    {
+        titulo: "Cheat Codes",
+        artista: "Cinco",
+        arquivo: "../src/musicas/cheat-codes-cinco-main-version-01-56-2929.mp3"
+    },
+    {
+        titulo: "Childhood Afternoons",
+        artista: "Lloom",
+        arquivo: "../src/musicas/childhood-afternoons-lloom-main-version-25583-03-11.mp3"
+    },
+    {
+        titulo: "Dreamin",
+        artista: "Danijel Zambo",
+        arquivo: "../src/musicas/dreamin-danijel-zambo-main-version-1387-01-48.mp3"
+    }
+];
+
+let musicaAtual = 0;
+let zIndexAtual = 1000;
+let janelasAbertas = [];
 
 document.querySelectorAll('.pasta').forEach(botao => {
     botao.addEventListener('click', (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
         const idJanela = botao.getAttribute('data-janela');
         criarJanela(idJanela);
     });
@@ -54,7 +240,7 @@ document.querySelectorAll('.pasta').forEach(botao => {
 
 document.querySelectorAll('.icones-janelas').forEach(botao => {
     botao.addEventListener('click', (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
         const idJanela = botao.getAttribute('data-janela');
         criarJanela(idJanela);
     });
@@ -107,7 +293,7 @@ function criarJanela(id) {
         novaAba.addEventListener('click', () => {
             focarECentralizarJanela(novaJanela);
         });
-        
+
         containerAbas.appendChild(novaAba);
     }
     novaJanela.querySelector('.btn-fechar').addEventListener('click', () => {
@@ -118,6 +304,9 @@ function criarJanela(id) {
     novaJanela.addEventListener('touchstart', () => focarJanela(novaJanela));
     configurarArrasto(novaJanela, novaJanela.querySelector('.janela-barra'));
     configurarRedimensionamento(novaJanela);
+    if (id === "musicas") {
+        iniciarPlayer();
+    }
 }
 
 function focarECentralizarJanela(janela) {
@@ -135,7 +324,7 @@ function focarECentralizarJanela(janela) {
 function focarJanela(janela) {
     zIndexAtual++;
     janela.style.zIndex = zIndexAtual;
-    document.querySelectorAll('.aba-item').forEach(aba => aba.classList.remove('ativa'));   
+    document.querySelectorAll('.aba-item').forEach(aba => aba.classList.remove('ativa'));
     const idOriginal = janela.id.replace('janela-', '');
     const abaCorrespondente = document.getElementById(`aba-${idOriginal}`);
     if (abaCorrespondente) {
@@ -235,7 +424,6 @@ function configurarRedimensionamento(janela) {
 
         document.removeEventListener('mousemove', redimensionando);
         document.removeEventListener('touchmove', redimensionando);
-
         document.removeEventListener('mouseup', pararResize);
         document.removeEventListener('touchend', pararResize);
     }
@@ -287,5 +475,140 @@ function configurarArrasto(janela, barra) {
         document.removeEventListener('touchmove', arrastando);
         document.removeEventListener('mouseup', pararArrasto);
         document.removeEventListener('touchend', pararArrasto);
+    }
+}
+
+function iniciarPlayer() {
+
+    const audio = document.getElementById("audio-player");
+
+    if (!audio) return;
+
+    const btnPlay = document.getElementById("btn-play");
+    const btnAnterior = document.getElementById("btn-anterior");
+    const btnProximo = document.getElementById("btn-proximo");
+    const titulo = document.getElementById("player-titulo");
+    const artista = document.getElementById("player-artista");
+    const progresso = document.querySelector(
+        ".player-progresso-barra"
+    );
+
+    const tempoAtual = document.getElementById("tempo-atual");
+    const tempoTotal = document.getElementById("tempo-total");
+    const volume = document.getElementById("volume");
+    const itens = document.querySelectorAll(".musica-item");
+    function carregarMusica(indice, tocar = false) {
+
+        musicaAtual = indice;
+        const musica = playlist[musicaAtual];
+        audio.src = musica.arquivo;
+        titulo.textContent = musica.titulo;
+        artista.textContent = musica.artista;
+        progresso.style.width = "0%";
+        itens.forEach(item => {
+            item.classList.remove("ativa");
+        });
+
+        if (itens[musicaAtual]) {
+            itens[musicaAtual].classList.add("ativa");
+        }
+
+        if (tocar) {
+            audio.play();
+            btnPlay.textContent = "❚❚";
+        } else {
+            btnPlay.textContent = "▶";
+        }
+    }
+
+
+    btnPlay.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            btnPlay.textContent = "❚❚";
+        } else {
+            audio.pause();
+            btnPlay.textContent = "▶";
+        }
+
+    });
+
+
+    btnAnterior.addEventListener("click", () => {
+        musicaAtual--;
+        if (musicaAtual < 0) {
+            musicaAtual = playlist.length - 1;
+        }
+        carregarMusica(musicaAtual, true);
+    });
+
+
+    btnProximo.addEventListener("click", () => {
+        musicaAtual++;
+        if (musicaAtual >= playlist.length) {
+            musicaAtual = 0;
+        } carregarMusica(musicaAtual, true);
+
+    });
+
+
+    itens.forEach(item => {
+        item.addEventListener("click", () => {
+            const indice = Number(
+                item.dataset.musica
+            );
+            carregarMusica(indice, true);
+        });
+    });
+
+
+    audio.addEventListener("timeupdate", () => {
+        if (!audio.duration) return;
+        const porcentagem =
+            (audio.currentTime / audio.duration) * 100;
+        progresso.style.width =
+            porcentagem + "%";
+        tempoAtual.textContent =
+            formatarTempo(audio.currentTime);
+    });
+
+
+    audio.addEventListener("loadedmetadata", () => {
+        tempoTotal.textContent =
+            formatarTempo(audio.duration);
+    });
+
+
+    audio.addEventListener("ended", () => {
+        musicaAtual++;
+        if (musicaAtual >= playlist.length) {
+            musicaAtual = 0;
+        }
+        carregarMusica(musicaAtual, true);
+    });
+
+    volume.addEventListener("input", () => {
+        audio.volume = volume.value;
+    });
+
+    carregarMusica(0);
+
+    function formatarTempo(segundos) {
+
+        if (!segundos || isNaN(segundos)) {
+            return "00:00";
+        }
+
+        const minutos =
+            Math.floor(segundos / 60);
+
+        const segundosRestantes =
+            Math.floor(segundos % 60);
+
+        return (
+            String(minutos).padStart(2, "0") +
+            ":" +
+            String(segundosRestantes).padStart(2, "0")
+        );
     }
 }
