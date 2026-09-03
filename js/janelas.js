@@ -19,7 +19,7 @@ const dadosJanelas = {
             <div class="janela-habilidades">
     
                 <div class="habilidades-cabecalho">
-                    <img src="../src/icones/computador.png" alt="Computador">
+                    <img src="./src/icones/computador.png" alt="Computador">
                     <div>
                         <strong>MINHAS HABILIDADES TÉCNICAS</strong>
                         <span>Conhecimentos e ferramentas</span>
@@ -94,7 +94,7 @@ const dadosJanelas = {
                 <div class="player-display">
                     <div class="player-capa">
                         <img id="player-capa"
-                             src="../src/icones/music.gif"
+                             src="./src/icones/music.gif"
                              alt="Capa da música">
                     </div>
                     <div class="player-info">
@@ -170,7 +170,7 @@ const dadosJanelas = {
                 <div class="nota-menu">
                     <button class="nota-salvar" title="Salvar">
                         <img
-                            src="../src/icones/salvar.png"
+                            src="./src/icones/salvar.png"
                             alt="Salvar"
                         >
                     </button>  
@@ -245,7 +245,7 @@ const dadosJanelas = {
                         disabled
                     >
                         <img
-                            src="../src/icones/salvar.png"
+                            src="./src/icones/salvar.png"
                             alt="Salvar"
                         >
                     </button>
@@ -676,7 +676,7 @@ const dadosJanelas = {
     
         <div class="curriculo-pagina">
             <header class="curriculo-cabecalho">
-            <img src="../src/icones/eu.jpg" alt="Eu" class="curriculo-foto">
+            <img src="./src/icones/eu.jpg" alt="Eu" class="curriculo-foto">
                 <div>
                     <h1>ANA ELISA</h1>
                     <p class="curriculo-cargo">DESENVOLVEDORA JAVA</p>
@@ -984,22 +984,22 @@ const playlist = [
     {
         titulo: "Algorithm",
         artista: "Sky Gienger",
-        arquivo: "../src/musicas/algorithm-sky-gienger-main-version-01-28-12896.mp3"
+        arquivo: "./src/musicas/algorithm-sky-gienger-main-version-01-28-12896.mp3"
     },
     {
         titulo: "Cheat Codes",
         artista: "Cinco",
-        arquivo: "../src/musicas/cheat-codes-cinco-main-version-01-56-2929.mp3"
+        arquivo: "./src/musicas/cheat-codes-cinco-main-version-01-56-2929.mp3"
     },
     {
         titulo: "Childhood Afternoons",
         artista: "Lloom",
-        arquivo: "../src/musicas/childhood-afternoons-lloom-main-version-25583-03-11.mp3"
+        arquivo: "./src/musicas/childhood-afternoons-lloom-main-version-25583-03-11.mp3"
     },
     {
         titulo: "Dreamin",
         artista: "Danijel Zambo",
-        arquivo: "../src/musicas/dreamin-danijel-zambo-main-version-1387-01-48.mp3"
+        arquivo: "./src/musicas/dreamin-danijel-zambo-main-version-1387-01-48.mp3"
     }
 ];
 
