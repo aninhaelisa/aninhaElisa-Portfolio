@@ -15,7 +15,12 @@
     <video id="video-fundo" autoplay muted playsinline>
         <source src="src/ANAELISA.mp4" type="video/mp4">
     </video>
-    <div class="aviso-mobile">Este portfólio tem melhor desempenho em computadores desktop</div>
+    <div class="aviso-mobile">
+        Este portfólio tem melhor desempenho em computadores desktop
+        <br><br>
+        Você está limitado a abrir apenas uma janela por vez
+    </div>
+
 
     <footer>
         <header class="navbar">
@@ -58,6 +63,12 @@
                         <a href="/" class="icones-janelas" data-janela="paint">
                             <img src="src/icones/pintar.png" alt="">
                             Paint
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" class="icones-janelas" data-janela="calculadora">
+                            <img src="src/icones/calculadora.png" alt="">
+                            Calculadora
                         </a>
                     </li>
                     <li>
@@ -118,7 +129,7 @@
                 <p>habilidades</p>
             </a>
             <a href="#" class="icones-janelas" data-janela="curriculo"> <img src="src/icones/curriculo.png"
-                    alt="habilidades">
+                    alt="curriculo">
                 <p>Curriculo</p>
             </a>
             <a href="#" class="icones-janelas" data-janela="compilador"> <img src="src/icones/comando.png"
@@ -127,6 +138,12 @@
             </a>
         </section>
 
+        <section class="icons">
+            <a href="#" class="icones-janelas" data-janela="lixeira">
+                <img src="src/icones/lixo.png" alt="">
+                <p>Recicle</p>
+            </a>
+        </section>
 
         <section class="mascote" aria-label="Mascote do portfólio">
             <div class="mascote-balao">
@@ -150,10 +167,12 @@
             <li id="menu-sobre" data-janela="curriculo">Curriculo</li>
         </ul>
     </div>
+
+    <script src="js/script.js"></script>
     <script src="js/janelas.js"></script>
     <script src="js/mascote.js"></script>
-    <script src="js/script.js"></script>
-    
+    <script src="js/recicle-game.js"></script>
+
 </body>
 
 </html>

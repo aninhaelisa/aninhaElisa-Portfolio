@@ -40,6 +40,7 @@ body {
     overflow: hidden;
 
 }
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -60,6 +61,7 @@ body {
 
     z-index: -1;
 }
+
 footer {
     width: 100%;
     min-height: 20px;
@@ -82,10 +84,10 @@ footer {
     font-size: var(--font-size-destaque);
     align-items: center;
     text-align: center;
-    height: 100%;
+
 }
 
-.data{
+.data {
     border-right: 2px solid white;
     margin-right: 2px;
 }
@@ -107,9 +109,9 @@ footer {
     position: absolute;
     border: 1px solid rgba(0, 102, 204, 0.6);
     background-color: rgba(0, 102, 204, 0.15);
-    display: none; 
-    pointer-events: none; 
-    z-index: 9999; 
+    display: none;
+    pointer-events: none;
+    z-index: 9999;
 }
 
 .home {
@@ -125,11 +127,12 @@ footer {
     margin: 10px;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
 .icons img {
-    width: var(--width-padrao-icone);
-    height: var(--height-padrao-icone);
+    width: 8vh;
+    height: auto;
     margin-top: 15px;
 }
 
@@ -138,7 +141,7 @@ footer {
     font-family: var(--font-destaque);
     color: var(--cor-texto);
     font-weight: var(--font-weight-destaque);
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -311,35 +314,39 @@ footer {
     image-rendering: pixelated;
 }
 
-.aviso-mobile{
+.aviso-mobile {
     display: none;
 }
 
 /*MOBILE*/
 @media screen and (max-width: 768px) {
-    #ocultar-mob{
+    #ocultar-mob {
         display: none;
     }
+
     .aviso-mobile {
         display: block;
+        display: block;
         position: fixed;
-        bottom: 0;
-        left: 20%;
-        transform: translate(-50%, -50%);
+        bottom: 120px;
+        left: 50%;
+        transform: translateX(-50%);
         background-color: #5784ff;
         color: #000;
-        padding: 10px;
+        padding: 10px 14px;
         text-align: center;
-        max-width: 12vh;
+        max-width: 350px;
         font-family: var(--font-texto);
+        font-size: 12px;
+        z-index: 9999;
     }
-    
+
 }
 
 
 /*MENU DE CONTEXTO*/
 .menu-contexto {
-    display: none; 
+    display: none;
     position: fixed;
     background-color: #c0c0c0;
     border-top: var(--borda-top);
@@ -348,7 +355,7 @@ footer {
     border-bottom: var(--borda-bottom);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     min-width: 180px;
-    z-index: 100000; 
+    z-index: 100000;
     font-family: sans-serif;
     font-size: 0.85rem;
     user-select: none;

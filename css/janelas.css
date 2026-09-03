@@ -1681,6 +1681,7 @@
     border-right: var(--borda-right);
     border-bottom: var(--borda-bottom);
 }
+
 .compilador-retro {
     width: 100%;
     height: 100%;
@@ -1708,4 +1709,211 @@
 
 .compilador-status {
     flex-shrink: 0;
+}
+
+.calculadora-retro {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: #c0c0c0;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculadora-menu {
+    height: 22px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 12px;
+    padding-left: 4px;
+    color: #000;
+}
+
+.calculadora-menu span {
+    cursor: default;
+}
+
+.calculadora-display {
+    padding: 5px 4px 8px;
+}
+
+.calculadora-tela {
+    width: 100%;
+    height: 38px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+    color: #000000;
+
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+
+    font-family: "Courier New", monospace;
+    font-size: 22px;
+    text-align: right;
+    padding: 4px 7px;
+}
+
+.calculadora-botoes {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+
+    padding: 3px;
+}
+
+.calculadora-botoes button {
+    min-width: 0;
+
+    background: #c0c0c0;
+    color: #000;
+
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 15px;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    cursor: pointer;
+}
+
+.calculadora-botoes button:active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+.calculadora-botoes .calc-operador {
+    font-weight: bold;
+}
+
+.calculadora-botoes .calc-funcao {
+    font-size: 12px;
+}
+
+.calculadora-botoes .calc-igual {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.calculadora-status {
+    height: 20px;
+    box-sizing: border-box;
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    margin-top: 3px;
+    padding: 2px 5px;
+    font-size: 11px;
+    color: #404040;
+}
+
+.ecorecycle {
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    background: #c0c0c0;
+    color: #000;
+    font-family: "MS Sans Serif", Arial, sans-serif;
+    padding: 6px;
+}
+
+.eco-titulo {
+    background: #000080;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 7px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+}
+
+.eco-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    padding: 5px;
+    background: #fff;
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.eco-area {
+    margin-top: 8px;
+    padding: 12px 8px;
+    text-align: center;
+    background: #757575;
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.eco-objeto {
+    font-size: 55px;
+    margin: 10px 0;
+    height: 65px;
+}
+
+.eco-area p {
+    margin: 5px 0 12px;
+    font-size: 13px;
+}
+
+.eco-lixeiras {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+.eco-lixeiras button {
+    min-height: 65px;
+    background: #c0c0c0;
+    color: #000;
+    font-family: "MS Sans Serif", Arial, sans-serif;
+    font-size: 11px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+    cursor: pointer;
+}
+
+.eco-lixeiras button:active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+#eco-mensagem {
+    margin-top: 10px;
+    min-height: 18px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.eco-dica {
+    margin-top: 8px;
+    padding: 6px;
+    background: #ffffe1;
+    border: 1px solid #808080;
+    font-size: 11px;
 }

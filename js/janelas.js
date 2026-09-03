@@ -160,8 +160,8 @@ const dadosJanelas = {
     
             </div>
         `,
-        largura: "380px",
-        altura: "390px"
+        largura: "350px",
+        altura: "300px"
     },
     nota: {
         titulo: "Bloco de Notas",
@@ -518,10 +518,10 @@ const dadosJanelas = {
     
         <div class="config-corpo">
             <div class="config-sidebar">
-                <button class="config-item ativo" data-config="aparencia">🖥 Aparência</button>
-                <button class="config-item" data-config="efeitos">✨ Efeitos</button>
-                <button class="config-item" data-config="som">🔊 Som</button>
-                <button class="config-item" data-config="sistema">⚙ Sistema</button>
+                <button class="config-item ativo" data-config="aparencia">Aparência</button>
+                <button class="config-item" data-config="efeitos">Efeitos</button>
+                <button class="config-item" data-config="som">Som</button>
+                <button class="config-item" data-config="sistema">Sistema</button>
             </div>
     
             <div class="config-painel">
@@ -853,7 +853,131 @@ const dadosJanelas = {
         `,
         largura: "350px",
         altura: "300px"
+    },
+
+    calculadora: {
+        titulo: "Calculadora",
+        conteudo: `
+        <div class="calculadora-retro">
+
+            <div class="calculadora-menu">
+                <span>Exibir</span>
+                <span>Editar</span>
+                <span>Ajuda</span>
+            </div>
+
+            <div class="calculadora-display">
+                <input
+                    type="text"
+                    class="calculadora-tela"
+                    value="0"
+                    readonly
+                >
+            </div>
+
+            <div class="calculadora-botoes">
+
+                <button class="calc-funcao" data-acao="backspace">←</button>
+                <button class="calc-funcao" data-acao="ce">CE</button>
+                <button class="calc-funcao" data-acao="clear">C</button>
+                <button class="calc-operador" data-valor="/">÷</button>
+
+                <button data-valor="7">7</button>
+                <button data-valor="8">8</button>
+                <button data-valor="9">9</button>
+                <button class="calc-operador" data-valor="*">×</button>
+
+                <button data-valor="4">4</button>
+                <button data-valor="5">5</button>
+                <button data-valor="6">6</button>
+                <button class="calc-operador" data-valor="-">−</button>
+
+                <button data-valor="1">1</button>
+                <button data-valor="2">2</button>
+                <button data-valor="3">3</button>
+                <button class="calc-operador" data-valor="+">+</button>
+
+                <button class="calc-funcao" data-acao="sinal">±</button>
+                <button data-valor="0">0</button>
+                <button data-valor=".">.</button>
+                <button class="calc-igual" data-acao="igual">=</button>
+
+            </div>
+
+            <div class="calculadora-status">
+                Pronto
+            </div>
+
+        </div>
+    `,
+        largura: "280px",
+        altura: "330px"
+    },
+    lixeira: {
+        titulo: "Lixeira - EcoRecycle.exe",
+        conteudo: `
+            <div class="ecorecycle">
+    
+                <div class="eco-titulo">
+                    ♻ EcoRecycle.exe
+                </div>
+    
+                <div class="eco-info">
+                    <span>RECICLE OS OBJETOS!</span>
+                    <span>Pontos: <b id="eco-pontos">0</b></span>
+                </div>
+    
+                <div class="eco-area">
+    
+                    <div class="eco-objeto" id="eco-objeto">
+                        🥤
+                    </div>
+    
+                    <p id="eco-pergunta">
+                        Onde este objeto deve ser descartado?
+                    </p>
+    
+                    <div class="eco-lixeiras">
+    
+                        <button onclick="reciclar('papel')">
+                            
+                            PAPEL
+                        </button>
+    
+                        <button onclick="reciclar('plastico')">
+                            
+                            PLÁSTICO
+                        </button>
+    
+                        <button onclick="reciclar('vidro')">
+                            
+                            VIDRO
+                        </button>
+    
+                        <button onclick="reciclar('metal')">
+                            
+                            METAL
+                        </button>
+    
+                    </div>
+    
+                    <div id="eco-mensagem">
+                        Selecione uma lixeira!
+                    </div>
+    
+                </div>
+    
+                <div class="eco-dica">
+                    💡 DICA: reciclar ajuda a diminuir a quantidade de lixo
+                    enviado para aterros sanitários.
+                </div>
+    
+            </div>
+        `,
+        largura: "280px",
+        altura: "330px"
     }
+
 };
 
 const playlist = [
@@ -920,7 +1044,9 @@ function criarJanela(id) {
     const info = dadosJanelas[id];
     if (!info) return;
 
-    if (janelasAbertas.length >= 3) {
+    const limiteJanelas = window.innerWidth <= 768 ? 1 : 3;
+
+    if (janelasAbertas.length >= limiteJanelas) {
         const idParaFechar = janelasAbertas.shift();
         fecharJanelaCompleto(idParaFechar);
     }
@@ -995,7 +1121,12 @@ function criarJanela(id) {
     if (id === "curriculo") {
         iniciarCurriculo(novaJanela);
     }
-
+    if (id === "calculadora") {
+        iniciarCalculadora(novaJanela);
+    }
+    if (id === "lixeira") {
+        iniciarLixeira(novaJanela);
+    }
 }
 
 console.log(
@@ -1735,3 +1866,225 @@ function iniciarCurriculo(janela) {
     });
 }
 
+function iniciarCalculadora(janela) {
+    const tela = janela.querySelector(".calculadora-tela");
+    const status = janela.querySelector(".calculadora-status");
+    const botoes = janela.querySelectorAll(".calculadora-botoes button");
+    let valorAtual = "0";
+    let valorAnterior = null;
+    let operador = null;
+    let esperandoNovoNumero = false;
+
+    function atualizarTela() {
+        tela.value = valorAtual;
+    }
+
+    function adicionarNumero(numero) {
+        if (esperandoNovoNumero) {
+            valorAtual = numero;
+            esperandoNovoNumero = false;
+            atualizarTela();
+            return;
+        }
+
+        if (numero === "." && valorAtual.includes(".")) {
+            return;
+        }
+
+        if (valorAtual === "0" && numero !== ".") {
+            valorAtual = numero;
+        } else {
+            valorAtual += numero;
+        }
+
+        atualizarTela();
+    }
+
+    function escolherOperador(novoOperador) {
+        if (operador && valorAnterior !== null) {
+            calcular();
+        }
+
+        valorAnterior = Number(valorAtual);
+        operador = novoOperador;
+        esperandoNovoNumero = true;
+        status.textContent = "Operação: " + novoOperador;
+    }
+
+    function calcular() {
+        if (operador === null || valorAnterior === null) {
+            return;
+        }
+
+        const atual = Number(valorAtual);
+        let resultado;
+
+        switch (operador) {
+            case "+":
+                resultado = valorAnterior + atual;
+                break;
+            case "-":
+                resultado = valorAnterior - atual;
+                break;
+            case "*":
+                resultado = valorAnterior * atual;
+                break;
+            case "/":
+                if (atual === 0) {
+                    valorAtual = "Erro";
+                    valorAnterior = null;
+                    operador = null;
+                    esperandoNovoNumero = true;
+                    atualizarTela();
+                    status.textContent = "Erro: divisão por zero";
+                    return;
+                }
+
+                resultado = valorAnterior / atual;
+                break;
+        }
+
+        valorAtual = String(resultado);
+        valorAnterior = null;
+        operador = null;
+        esperandoNovoNumero = true;
+        atualizarTela();
+        status.textContent = "Resultado";
+    }
+
+    function limpar() {
+        valorAtual = "0";
+        valorAnterior = null;
+        operador = null;
+        esperandoNovoNumero = false;
+        atualizarTela();
+        status.textContent = "Pronto";
+    }
+
+    function limparEntrada() {
+        valorAtual = "0";
+        esperandoNovoNumero = false;
+        atualizarTela();
+        status.textContent = "Entrada limpa";
+    }
+
+    function apagarUltimo() {
+        if (esperandoNovoNumero || valorAtual === "Erro") {
+            return;
+        }
+
+        valorAtual = valorAtual.slice(0, -1);
+
+        if (valorAtual === "" || valorAtual === "-") {
+            valorAtual = "0";
+        }
+
+        atualizarTela();
+    }
+
+    function trocarSinal() {
+        if (valorAtual === "0" || valorAtual === "Erro") {
+            return;
+        }
+
+        valorAtual = valorAtual.startsWith("-")
+            ? valorAtual.slice(1)
+            : "-" + valorAtual;
+
+        atualizarTela();
+    }
+
+    function porcentagem() {
+        const numero = Number(valorAtual);
+        valorAtual = String(numero / 100);
+        atualizarTela();
+        status.textContent = "Porcentagem";
+    }
+
+    botoes.forEach(botao => {
+        botao.addEventListener("click", () => {
+            const valor = botao.dataset.valor;
+            const acao = botao.dataset.acao;
+
+            if (valor !== undefined) {
+                if (valor === "+" || valor === "-" || valor === "*" || valor === "/") {
+                    escolherOperador(valor);
+                    return;
+                }
+
+                adicionarNumero(valor);
+                return;
+            }
+
+            switch (acao) {
+                case "igual":
+                    calcular();
+                    break;
+                case "clear":
+                    limpar();
+                    break;
+                case "ce":
+                    limparEntrada();
+                    break;
+                case "backspace":
+                    apagarUltimo();
+                    break;
+                case "sinal":
+                    trocarSinal();
+                    break;
+            }
+        });
+    });
+
+    /* Teclado */
+    function teclado(e) {
+        if (!document.getElementById("janela-calculadora")) {
+            return;
+        }
+
+        if (e.key >= "0" && e.key <= "9") {
+            adicionarNumero(e.key);
+            return;
+        }
+
+        if (e.key === ".") {
+            adicionarNumero(".");
+            return;
+        }
+
+        if (e.key === "+" || e.key === "-" || e.key === "*" || e.key === "/") {
+            escolherOperador(e.key);
+            return;
+        }
+
+        if (e.key === "Enter" || e.key === "=") {
+            calcular();
+            return;
+        }
+
+        if (e.key === "Escape") {
+            limpar();
+            return;
+        }
+
+        if (e.key === "Backspace") {
+            apagarUltimo();
+        }
+    }
+
+    document.addEventListener("keydown", teclado);
+
+    /* Pequeno suporte para % */
+    const botaoPorcentagem = document.createElement("button");
+    botaoPorcentagem.textContent = "%";
+    botaoPorcentagem.className = "calc-funcao";
+    botaoPorcentagem.addEventListener("click", porcentagem);
+
+    const primeiroBotao = janela.querySelector(".calculadora-botoes button");
+
+    if (primeiroBotao) {
+        primeiroBotao.parentNode.insertBefore(botaoPorcentagem, primeiroBotao);
+    }
+
+    atualizarTela();
+}

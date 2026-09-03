@@ -31,9 +31,28 @@ function iniciarDataEHora() {
     hora();
 }
 
-menuToggle.addEventListener("click", () => {
+menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
     navMenu.classList.toggle("active");
 });
+
+navMenu.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    if (e.target.closest("a")) {
+        navMenu.classList.remove("active");
+    }
+});
+
+document.addEventListener("click", (e) => {
+    if (
+        !e.target.closest(".nav-menu") &&
+        !e.target.closest(".menu-toggle")
+    ) {
+        navMenu.classList.remove("active");
+    }
+});
+
 
 document.addEventListener('mousedown', (e) => {
     if (e.target.closest('.janela') || e.target.closest('footer') || e.target.closest('.pasta')) return;
