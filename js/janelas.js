@@ -3,10 +3,10 @@ const dadosJanelas = {
         titulo: "Contato",
         conteudo: `
         <div class="janela-icons">
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=elisaana.2019.2006@email.com"><img src="../src/icones/email.png" alt="Imagem de Contato"><p>email</p></a>
-            <a href="https://github.com/aninhaelisa"><img src="../src/icones/github.png" alt="Imagem de Contato"><p>github</p></a>
-            <a href="https://www.linkedin.com/in/ana-elisa-00477a3a8/"><img src="../src/icones/link.png" alt="Imagem de Contato"><p>linkedin</p></a>
-            <a href="https://www.instagram.com/elisa_aninh/"><img src="../src/icones/insta.png" alt="Imagem de Contato"><p>insta</p></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=elisaana.2019.2006@email.com"><img src="./src/icones/email.png" alt="Imagem de Contato"><p>email</p></a>
+            <a href="https://github.com/aninhaelisa"><img src="./src/icones/github.png" alt="Imagem de Contato"><p>github</p></a>
+            <a href="https://www.linkedin.com/in/ana-elisa-00477a3a8/"><img src="./src/icones/link.png" alt="Imagem de Contato"><p>linkedin</p></a>
+            <a href="https://www.instagram.com/elisa_aninh/"><img src="./src/icones/insta.png" alt="Imagem de Contato"><p>insta</p></a>
        
             </div>    
         `,
