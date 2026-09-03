@@ -339,8 +339,20 @@ footer {
         font-family: var(--font-texto);
         font-size: 12px;
         z-index: 9999;
+        animation: desaparecer 2s ease 2min forwards;
     }
 
+
+    @keyframes desaparecer {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
 }
 
 
