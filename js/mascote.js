@@ -6,7 +6,7 @@ const mascoteFala = document.querySelector(".mascote-fala");
 
 const expressoes = [
     {
-        imagem: "../src/mascote/falando.gif",
+        imagem: "./src/mascote/falando.gif",
         falas: [
             "System.out.print(''HELLO WORLD'');",
             "Bem-vindo ao meu cantinho!",
@@ -17,7 +17,7 @@ const expressoes = [
     },
 
     {
-        imagem: "../src/mascote/feliz.gif",
+        imagem: "./src/mascote/feliz.gif",
         falas: [
             "Ctrl + S e fé",
             "Que bom que você veio!",
@@ -28,7 +28,7 @@ const expressoes = [
     },
 
     {
-        imagem: "../src/mascote/confuso.gif",
+        imagem: "./src/mascote/confuso.gif",
         falas: [
             "isso não estava no escopo...",
             "Processando...",
@@ -39,7 +39,7 @@ const expressoes = [
     },
 
     {
-        imagem: "../src/mascote/assustado.gif",
+        imagem: "./src/mascote/assustado.gif",
         falas: [
             "NullPointerException jumpscare!!!",
             "Unexpected error detected...",
@@ -50,7 +50,7 @@ const expressoes = [
     },
 
     {
-        imagem: "../src/mascote/sad.gif",
+        imagem: "./src/mascote/sad.gif",
         falas: [
             "Esqueci de salvar...",
             "Só mais um bug...",
@@ -60,7 +60,7 @@ const expressoes = [
         ]
     },
     {
-        imagem: "../src/mascote/morto.gif",
+        imagem: "./src/mascote/morto.gif",
         falas: [
             "404: mascote não encontrado...",
             "git push --force",
@@ -69,7 +69,7 @@ const expressoes = [
         ]
     },
     {
-        imagem: "../src/mascote/empolgado.gif",
+        imagem: "./src/mascote/empolgado.gif",
         falas: [
             "O BUG SUMIU!!! ヽ(>▽<)ﾉ",
             "NÃO ACREDITO QUE FUNCIONOU!!",
@@ -78,7 +78,7 @@ const expressoes = [
         ]
     },
     {
-        imagem: "../src/mascote/escrevendo.gif",
+        imagem: "./src/mascote/escrevendo.gif",
         falas: [
             "Anotando uma ideia... ✎",
             "Escrevendo o código... no papel",
@@ -87,7 +87,7 @@ const expressoes = [
         ]
     },
     {
-        imagem: "../src/mascote/procurar.gif",
+        imagem: "./src/mascote/procurar.gif",
         falas: [
             "Onde você está o bug?",
             "Analisando o código...",
@@ -96,7 +96,7 @@ const expressoes = [
         ]
     },
     {
-        imagem: "../src/mascote/tchau.gif",
+        imagem: "./src/mascote/tchau.gif",
         falas: [
             "Hello World! ",
             "Um commit de boas-vindas!",
@@ -105,7 +105,7 @@ const expressoes = [
         ]
     },
     {
-        imagem: "../src/mascote/sono.gif",
+        imagem: "./src/mascote/sono.gif",
         falas: [
             "Zzzzz...",
             "Meu cérebro deu timeout",
@@ -114,7 +114,7 @@ const expressoes = [
         ]
     },
     {
-        imagem: "../src/mascote/cantando.gif",
+        imagem: "./src/mascote/cantando.gif",
         falas: [
             "Eu inventei essa música agora",
             "Não interrompa o show",
@@ -123,7 +123,7 @@ const expressoes = [
         ]
     },
     {
-        imagem: "../src/mascote/dormi.gif",
+        imagem: "./src/mascote/dormi.gif",
         falas: [
             "Erro 503: energia temporariamente indisponível",
             "RAM: ocupada com sono",
